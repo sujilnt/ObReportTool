@@ -45,7 +45,8 @@
   "dependencies": {
     "electron": "^3.0.2",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
