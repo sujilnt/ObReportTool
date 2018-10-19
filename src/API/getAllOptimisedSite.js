@@ -1,12 +1,15 @@
-const getAllOptimisedSite= ()=>{
+const getAllOptimisedSite= async ()=>{
  const prefixname="https://spreadsheets.google.com/feeds/list/";
  const sheetId="1fF5DgLQZ6fcULMbPlgI4PKtsv9kbKYb1pb0oIxXjE1o";
  const postFix="/od6/public/values?alt=json";
  const url=`${prefixname}${sheetId}${postFix}`;
- fetch(url).then((body)=> body.json()).then((data)=>{
-   return data;
- }).catch((error)=>{
-   console.log(error);
-  });
+ const  siteName =  await fetch(url).then((body)=> body.json()).then((data)=>{
+                        return data["feed"].entry;
+                    }).catch((error)=>{
+                  console.log(error);
+      });
+    return siteName;
 };
-module.exports.getAllOptimisedSite=getAllOptimisedSite;
+module.exports={
+      getAllOptimisedSite:getAllOptimisedSite,
+};

@@ -7,7 +7,7 @@ const getAllLocation = ()=>{
   const toDate = convertDate("2018-10-14");
 
 // url format
-  const _url= `https://api.dexcell.com/v3/locations/?limit=5`;
+  const _url= `https://api.dexcell.com/v3/locations/?limit=50`;
 //const params={fromDate,toDate};
   const options={
     url : _url,
@@ -17,11 +17,12 @@ const getAllLocation = ()=>{
     }
   };
   const requestPromise = new Promise((resolve,reject)=>{
-    request(options, async function(error, response, body) {
+        request(options, async function(error, response, body) {
       const data =await JSON.parse(body);
       data === undefined ? reject(data): resolve(data);
     });
   });
+  console.log("called me",requestPromise);
   return requestPromise;
 
 };
