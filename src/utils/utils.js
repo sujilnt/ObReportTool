@@ -15,11 +15,20 @@ const convertDate= (dateInput)=>{
 const numberFormatter = (number)=>{
   return (Math.round(number*100)/100).toFixed(2);
 };
-module.exports.numberFormatter=numberFormatter;
 
 // console.log(numberFormatter("48109.09999999999")); // 48109.10
 
+const totalKWH = (data)=>{
+  const resultArr=data;
+  let sum=0;
+  resultArr !== undefined ? resultArr.map((row)=>{
+    sum+=row.v;
+  }): "no Data round!";
+  return numberFormatter(sum);
+};
+
 module.exports= {
   convertDate: convertDate,
-  numberFormatter: numberFormatter
+  numberFormatter: numberFormatter,
+  totalKWH:totalKWH
 };

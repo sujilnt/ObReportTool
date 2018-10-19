@@ -7,7 +7,7 @@ const getAllLocation = ()=>{
   const toDate = convertDate("2018-10-14");
 
 // url format
-  const _url= `https://api.dexcell.com/v3/locations/?limit=50`;
+  const _url= `https://api.dexcell.com/v3/locations/?limit=500`;
 //const params={fromDate,toDate};
   const options={
     url : _url,
@@ -22,7 +22,6 @@ const getAllLocation = ()=>{
       data === undefined ? reject(data): resolve(data);
     });
   });
-  console.log("called me",requestPromise);
   return requestPromise;
 
 };
