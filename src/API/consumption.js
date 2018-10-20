@@ -14,7 +14,7 @@ const consumption = (fromDate,toDate,deviceID,params="D")=>{
       if(error) {
         return error;
       }
-      const data = JSON.parse(body);
+      const data = await JSON.parse(JSON.stringify(body));
       data === undefined ? reject(data): resolve(data);
     });
   });

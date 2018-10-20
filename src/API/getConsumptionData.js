@@ -27,4 +27,4 @@ const getConsumptionData=(reportDate,type)=>{
    // console.log("inside getConsumption",reference_devices,deviceId,fromDate,toDate)
   });
 };
-module.exports.getConsumptionData= getConsumptionData();
+module.exports.getConsumptionData= getConsumptionData;

@@ -1,10 +1,7 @@
 //const {parsingObj} = require("./parsingObjects.js");
 const request = require("request");
 const getAllLocation = ()=>{
-  const {convertDate} = require("../utils/utils.js");
-// convert date into ISO Format
-  const fromDate = convertDate("2018-10-07");
-  const toDate = convertDate("2018-10-14");
+
 
 // url format
   const _url= `https://api.dexcell.com/v3/locations/?limit=500`;
@@ -18,7 +15,8 @@ const getAllLocation = ()=>{
   };
   const requestPromise = new Promise((resolve,reject)=>{
         request(options, async function(error, response, body) {
-      const data =await JSON.parse(body);
+          console.log(body,response);
+          const data =await JSON.parse(JSON.stringify(body));
       data === undefined ? reject(data): resolve(data);
     });
   });
