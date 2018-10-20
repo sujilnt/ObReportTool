@@ -43,6 +43,7 @@
     "postpackage": "electron-packager ./ --out=./builds"
   },
   "dependencies": {
+    "antd": "^3.10.1",
     "electron": "^3.0.2",
     "fs": "0.0.1-security",
     "react": "^16.5.2",
