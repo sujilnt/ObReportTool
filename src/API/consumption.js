@@ -11,7 +11,10 @@ const consumption = (fromDate,toDate,deviceID,params="D")=>{
   };
   const requestPromise = new Promise((resolve,reject)=>{
     request(options, async function(error, response, body) {
-      const data =await JSON.parse(body);
+      if(error) {
+        return error;
+      }
+      const data = JSON.parse(body);
       data === undefined ? reject(data): resolve(data);
     });
   });
