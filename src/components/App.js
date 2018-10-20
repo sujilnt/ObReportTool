@@ -1,6 +1,6 @@
 import '../assets/css/App.css'
 import React, { Component } from 'react'
-
+import "../css/antd.css";
 class App extends React.Component {
   render() {
     return (
