@@ -1,13 +1,14 @@
-import '../assets/css/App.css'
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "../css/reset.css";
 import "../css/antd.css";
+
+import Layout from './Layout/Layout';
+import "./app.css";
 class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello, Electron!</h1>
-
-        <p>I hope you enjoy using basic-electron-react-boilerplate to start your dev off right!</p>
+        <Layout/>
       </div>
     )
   }
