@@ -3,3 +3,16 @@
   background: rgba(255,255,255,.2);
   margin: 16px;
 }
+.container{
+  display: block;
+  width:100%;
+
+}
+.flex-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-item{
+  align-items: center;
+  padding: 0 16px;
+}

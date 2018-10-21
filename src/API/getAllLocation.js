@@ -15,7 +15,6 @@ const getAllLocation = ()=>{
   };
   const requestPromise = new Promise((resolve,reject)=>{
         request(options, async function(error, response, body) {
-          console.log(body,response);
           const data =await JSON.parse(JSON.stringify(body));
       data === undefined ? reject(data): resolve(data);
     });
