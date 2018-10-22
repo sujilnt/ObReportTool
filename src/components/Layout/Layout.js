@@ -13,7 +13,13 @@ class SiderDemo extends React.Component {
   };
   dateChange=(e,s)=>{
     console.log(e,s);
-    getConsumptionData(s,"");
+    const data= getConsumptionData(s,"").then(function(values){
+      Promise.all(values).then(function(values){
+        console.log("last one",values);
+      });
+      console.log("inside layout",values.all)
+    });
+    console.log(data);
   };
   onCollapse = (collapsed) => {
     console.log(collapsed);
