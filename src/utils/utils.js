@@ -19,11 +19,13 @@ const numberFormatter = (number)=>{
 // console.log(numberFormatter("48109.09999999999")); // 48109.10
 
 const totalKWH = (data)=>{
+  console.log("kwh",data);
   const resultArr=data;
   let sum=0;
-  resultArr !== undefined ? resultArr.map((row)=>{
+  resultArr !== undefined  ? resultArr.map((row)=>{
     sum+=row.v;
   }): "no Data round!";
+  console.log("sum",sum);
   return numberFormatter(sum);
 };
 

@@ -3,13 +3,18 @@ import { Layout, Menu, Breadcrumb, Icon, Button } from 'antd';
 import "./Layout.css";
 const { Header, Content, Footer, Sider } = Layout;
 import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
+import { DatePicker } from 'antd';
+import {getConsumptionData} from "../../API/getConsumptionData";
 const SubMenu = Menu.SubMenu;
-
+const dateFormat = `YYYY/MM/DD`;
 class SiderDemo extends React.Component {
   state = {
     collapsed: false,
   };
-
+  dateChange=(e,s)=>{
+    console.log(e,s);
+    getConsumptionData(s,"");
+  };
   onCollapse = (collapsed) => {
     console.log(collapsed);
     this.setState({ collapsed });
@@ -64,7 +69,7 @@ class SiderDemo extends React.Component {
               <Breadcrumb.Item>Morisson</Breadcrumb.Item>
             </Breadcrumb>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              Bill is a cat.
+              <DatePicker format={dateFormat} onChange={this.dateChange}/>
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>

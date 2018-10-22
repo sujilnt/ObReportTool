@@ -4,7 +4,7 @@ const getAllLocation = ()=>{
 
 
 // url format
-  const _url= `https://api.dexcell.com/v3/locations/?limit=500`;
+  const _url= `https://api.dexcell.com/v3/locations/?limit=10`;
 //const params={fromDate,toDate};
   const options={
     url : _url,
