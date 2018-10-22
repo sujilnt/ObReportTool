@@ -1,7 +1,10 @@
 const request = require("request");
 //const {convertDate} = require("../utils/utils");
 const consumption = (fromDate,toDate,deviceID,params="D")=>{
-  const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=EACTIVE&resolution=${params}&operation=DELTA`;
+  //GASENERGY
+  //EACTIVE
+  const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=GASENERGY&resolution=${params}&operation=DELTA`;
+  console.log(_url);
   //const params={fromDate,toDate};
   const options={
     url : _url,
@@ -14,7 +17,11 @@ const consumption = (fromDate,toDate,deviceID,params="D")=>{
   };
   const requestPromise = new Promise((resolve,reject)=>{
     request(options, async function(error, response, body) {
-      const data =await response.toJSON({
+      if(error){
+        return error;
+      }
+      responseObj=response;
+      const data =await responseObj.toJSON({
         'error':error,
         'statusCode': response && response.statusCode,
         'body': body

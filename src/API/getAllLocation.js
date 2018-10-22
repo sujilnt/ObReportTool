@@ -2,7 +2,7 @@
 const request = require("request");
 const getAllLocation = ()=>{
 // url format
-  const _url= `https://api.dexcell.com/v3/locations/?limit=5`;
+  const _url= `https://api.dexcell.com/v3/locations/?limit=500`;
 //const params={fromDate,toDate};
   const options={
     url : _url,

@@ -13,7 +13,7 @@ class SiderDemo extends React.Component {
   };
   dateChange=(e,s)=>{
     console.log(e,s);
-    const data= getConsumptionData(s,).then(function(values){
+    const data= getConsumptionData(s,"GAS").then(function(values){
         console.log("last one",values);
       console.log("inside layout",values.all)
     });
