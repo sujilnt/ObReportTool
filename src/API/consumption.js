@@ -1,4 +1,5 @@
 const request = require("request");
+//const {convertDate} = require("../utils/utils");
 const consumption = (fromDate,toDate,deviceID,params="D")=>{
   const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=EACTIVE&resolution=${params}&operation=DELTA`;
   //const params={fromDate,toDate};
@@ -6,16 +7,19 @@ const consumption = (fromDate,toDate,deviceID,params="D")=>{
     url : _url,
     headers: {
       'x-dexcell-token' :"c0fd279531e5ab806330", // morrissons
-      "Accept": "application/json"
+      "Accept": "application/json",
+      'Accept-Charset': 'utf-8',
+      'Content-Type': 'application/json'
     }
   };
   const requestPromise = new Promise((resolve,reject)=>{
     request(options, async function(error, response, body) {
-      if(error) {
-        return error;
-      }
-      const data = JSON.parse(JSON.stringify(body));
-      data === undefined ? reject(data): resolve(data);
+      const data =await response.toJSON({
+        'error':error,
+        'statusCode': response && response.statusCode,
+        'body': body
+      });
+     ((response.statusCode === 200) && (data.body!== undefined))  ? resolve(data) : reject(data);
     });
   });
   return requestPromise;

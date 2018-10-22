@@ -4,9 +4,9 @@ const getAllOptimisedSite= async ()=>{
  const postFix="/od6/public/values?alt=json";
  const url=`${prefixname}${sheetId}${postFix}`;
  const  siteName =  await fetch(url).then((body)=> body.json()).then((data)=>{
-                        return data["feed"].entry;
-                    }).catch((error)=>{
-                  console.log(error);
+        return data["feed"].entry;
+ }).catch((error)=>{
+        return error;
       });
     return siteName;
 };

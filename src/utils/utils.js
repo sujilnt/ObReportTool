@@ -4,8 +4,10 @@
 * returns converted Date
 * */
 const convertDate= (dateInput)=>{
-  const dateInISO = new Date(dateInput).toISOString().replace(/[(:)]/g ,"%3A").split(".")[0];
-  return dateInISO;
+  if(dateInput !== undefined ){
+    const dateInISO = new Date(dateInput).toISOString().replace(/[(:)]/g ,"%3A").split(".")[0];
+    return dateInISO;
+  }
 };
 /* numberFormatter () -> formatting the number by rounding and showing 2 decimal places
 *   @params number
@@ -19,14 +21,12 @@ const numberFormatter = (number)=>{
 // console.log(numberFormatter("48109.09999999999")); // 48109.10
 
 const totalKWH = (data)=>{
-  console.log("kwh",data);
   const resultArr=data;
   let sum=0;
   resultArr !== undefined  ? resultArr.map((row)=>{
     sum+=row.v;
   }): "no Data round!";
-  console.log("sum",sum);
-  return numberFormatter(sum);
+  return numberFormatter(sum) !== 0 ? numberFormatter(sum) : 0 ;
 };
 
 module.exports= {

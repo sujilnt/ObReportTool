@@ -6,17 +6,15 @@ import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
 import { DatePicker } from 'antd';
 import {getConsumptionData} from "../../API/getConsumptionData";
 const SubMenu = Menu.SubMenu;
-const dateFormat = `YYYY/MM/DD`;
+const dateFormat = `YYYY-MM-DD`;
 class SiderDemo extends React.Component {
   state = {
     collapsed: false,
   };
   dateChange=(e,s)=>{
     console.log(e,s);
-    const data= getConsumptionData(s,"").then(function(values){
-      Promise.all(values).then(function(values){
+    const data= getConsumptionData(s,).then(function(values){
         console.log("last one",values);
-      });
       console.log("inside layout",values.all)
     });
     console.log(data);
