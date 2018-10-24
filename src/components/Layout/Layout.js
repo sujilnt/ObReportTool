@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb, Icon, Button } from 'antd';
-import "./Layout.css";
-const { Header, Content, Footer, Sider } = Layout;
+import { Layout, Menu, Icon } from 'antd';
 import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
-import { DatePicker } from 'antd';
 import {getConsumptionData} from "../../API/getConsumptionData";
+import OBToolcontent from "../OBToolcontent/OBToolcontent";
+import OBToolHeader from "../OBToolHeader/OBToolHeader";
+import OBToolFooter from "../OBToolFooter/OBToolFooter";
+import "./Layout.css";
+
+const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 const dateFormat = `YYYY-MM-DD`;
+
 class SiderDemo extends React.Component {
   state = {
     collapsed: false,
@@ -51,34 +55,17 @@ class SiderDemo extends React.Component {
               <Menu.Item key="6">Morrissons</Menu.Item>
               <Menu.Item key="8">SuperDry</Menu.Item>
             </SubMenu>
-            <Menu.Item key="9">
-              <Icon type="file" />
-              <span>File</span>
-            </Menu.Item>
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} >
-            <div className="container">
-              <div className="flex-container">
-                <div className="flex-item">
-                 <Button type="danger" onClick={this.UpdateData}>Data Update</Button>
-              </div>
-              </div>
-            </div>
-          </Header>
-          <Content style={{ margin: '0 16px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Report</Breadcrumb.Item>
-              <Breadcrumb.Item>Morisson</Breadcrumb.Item>
-            </Breadcrumb>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <DatePicker format={dateFormat} onChange={this.dateChange}/>
-            </div>
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>
-            <a href="https://www.optimisedbuildings.com/"> Optimised Buildings</a> ©2018 Created by <a href="https://github.com/sujilnt">Sujil Anto Thomas</a>
-          </Footer>
+          <OBToolHeader
+           onChange={this.UpdateData}
+          />
+         <OBToolcontent
+          dateFormat={dateFormat}
+          onChange={this.dateChange}
+         />
+          <OBToolFooter />
         </Layout>
       </Layout>
     );
