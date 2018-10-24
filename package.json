@@ -43,9 +43,11 @@
     "postpackage": "electron-packager ./ --out=./builds"
   },
   "dependencies": {
-    "antd": "^3.10.1",
+    "antd": "^3.10.2",
     "electron": "^3.0.2",
     "fs": "0.0.1-security",
+    "objects-to-csv": "^1.2.1",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "request": "^2.88.0"

@@ -5,8 +5,8 @@ import {getConsumptionData} from "../../API/getConsumptionData";
 import OBToolcontent from "../OBToolcontent/OBToolcontent";
 import OBToolHeader from "../OBToolHeader/OBToolHeader";
 import OBToolFooter from "../OBToolFooter/OBToolFooter";
+import OBToolSidebar from "../OBToolSideBar/OBToolSideBar";
 import "./Layout.css";
-
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 const dateFormat = `YYYY-MM-DD`;
@@ -41,21 +41,9 @@ class SiderDemo extends React.Component {
           onCollapse={this.onCollapse}
         >
           <div className="logo" />
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <SubMenu
-              key="sub1"
-              title={<span><Icon type="reconciliation" theme="outlined" /><span>Reports</span></span>}
-            >
-              <Menu.Item key="3" onClick={this.RenderReport}>Morrissons</Menu.Item>
-            </SubMenu>
-            <SubMenu
-              key="sub2"
-              title={<span><Icon type="audit" theme="outlined" /><span>DataCheck</span></span>}
-            >
-              <Menu.Item key="6">Morrissons</Menu.Item>
-              <Menu.Item key="8">SuperDry</Menu.Item>
-            </SubMenu>
-          </Menu>
+          <OBToolSidebar
+
+          />
         </Sider>
         <Layout>
           <OBToolHeader
