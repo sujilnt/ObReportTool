@@ -1,18 +1,25 @@
 const data = [
   {
     submenuName: "Report",
-    menuItems: ["Morrisons"],
+    menuItems: [{
+      name: "Reports",
+      url: "/reports"
+    }],
     defaultSelectedKeys: ['1'], // default selection of values
     menuItemClickerfunc: "RenderReport",
     icon: "reconciliation"
   },
   {
     submenuName: "DataCheck",
-    menuItems: ["Morrisons","SuperDry"],
+    menuItems: [
+      {
+        name:"DataCheck",
+        url: "/datacheck"
+      }],
    // menuItemClickerfunc: RenderReport,
     icon: "audit",
   }
 ];
 
 const sideBarData  = () => data ;
-module.exports.sideBarData=sideBarData();
+module.exports.sideBarData = sideBarData();

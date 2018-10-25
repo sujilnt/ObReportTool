@@ -1,12 +1,15 @@
 import React,{Component} from "react";
 import PropTypes from 'prop-types';
-import { Layout, Breadcrumb,DatePicker } from 'antd';
+import { Layout, Breadcrumb} from 'antd';
+import OBToolReport from "../OBToolReport/OBToolReport";
 const {Content}=Layout;
 
 class OBToolcontent extends Component{
   state={
+    iconLoading: false,
     loading:false
   };
+
   render(){
     return (
       <div>
@@ -15,10 +18,7 @@ class OBToolcontent extends Component{
             <Breadcrumb.Item>Report</Breadcrumb.Item>
             <Breadcrumb.Item>Morisson</Breadcrumb.Item>
           </Breadcrumb>
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-            <DatePicker format={this.props.dateFormat} onChange={this.props.onChange}/>
-
-          </div>
+          <OBToolReport />
         </Content>: "loading ..."}
       </div>
     )
@@ -26,7 +26,7 @@ class OBToolcontent extends Component{
 }
 export default OBToolcontent;
 OBToolcontent.propTypes ={
-   onChange: PropTypes.func.isRequired,
-   dateFormat:PropTypes.string.isRequired
+  // onChange: PropTypes.func.isRequired,
+   //dateFormat:PropTypes.string.isRequired
 };
 

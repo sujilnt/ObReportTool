@@ -1,12 +1,12 @@
 import React,{Component} from "react";
 import {sideBarData} from "../../API/sideBarData";
 import { Layout, Menu, Icon } from 'antd';
+import {Link} from "react-router-dom";
 const SubMenu = Menu.SubMenu;
-
 const renderMenuItem=(data)=>{
   const renderMenuItemArr=[];
   const eachMenuItem= data.map((row)=>{
-    renderMenuItemArr.push(<Menu.Item key={`${row}index`} >{row}</Menu.Item>)
+    renderMenuItemArr.push(<Menu.Item key={`${row}index`} ><Link to={row.url}>{row.name}</Link></Menu.Item>)
   });
   return renderMenuItemArr;
 };
@@ -15,7 +15,7 @@ const renderSubMenu = (data)=>{
      const eachSideBarMenu = data.map((row,index)=>{
        renderSubmenu.push(<SubMenu
         key={`${row.submenuName}index`}
-         title={<span><Icon type={row.icon} theme="outlined" /><span>{row.submenuName}</span></span>}
+        title={<span><Icon type={row.icon} theme="outlined" /><span>{row.submenuName}</span></span>}
        >
          {renderMenuItem(row.menuItems)}
        </SubMenu>);

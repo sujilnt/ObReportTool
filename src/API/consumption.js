@@ -1,9 +1,9 @@
 const request = require("request");
 //const {convertDate} = require("../utils/utils");
-const consumption = (fromDate,toDate,deviceID,params="D")=>{
+const consumption = (fromDate,toDate,deviceID,params="D",paramkey="GASENERGY")=>{
   //GASENERGY
   //EACTIVE
-  const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=GASENERGY&resolution=${params}&operation=DELTA`;
+  const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=${paramkey}&resolution=${params}&operation=DELTA`;
   console.log(_url);
   //const params={fromDate,toDate};
   const options={
