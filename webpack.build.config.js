@@ -1,11 +1,11 @@
-const webpack = require('webpack')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BabiliPlugin = require('babili-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BabiliPlugin = require('babili-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Any directories you will be adding code/files into, need to be added to this array so webpack will pick them up
-const defaultInclude = path.resolve(__dirname, 'src')
+const defaultInclude = path.resolve(__dirname, 'src');
 
 module.exports = {
   module: {
@@ -22,11 +22,6 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: [{ loader: 'babel-loader' }],
-        include: defaultInclude
-      },
-      {
-        test: /\.(jpe?g|png|gif)$/,
-        use: [{ loader: 'file-loader?name=img/[name]__[hash:base64:5].[ext]' }],
         include: defaultInclude
       },
       {
@@ -56,4 +51,4 @@ module.exports = {
     chunks: false,
     modules: false
   }
-}
+};
