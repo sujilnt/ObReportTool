@@ -1,6 +1,9 @@
 const filterData=(getAlllocations)=>{
   const filterDataWithOptimisedDates = getAlllocations.filter((row)=>{
-    return row["reference_devices"] !== undefined && row["optimisedDate"] ? row["reference_devices"].length !== 0 : "";
+    const refrenceDevice= row["reference_devices"];
+    return typeof(refrenceDevice) === "object" ?
+      refrenceDevice !== undefined && refrenceDevice ? refrenceDevice.length !== 0 : ""
+      : "";
   });
   return filterDataWithOptimisedDates;
 };

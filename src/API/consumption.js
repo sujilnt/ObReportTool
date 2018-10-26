@@ -1,15 +1,14 @@
 const request = require("request");
+const {generateToken}= require("../utils/generateToken");
 //const {convertDate} = require("../utils/utils");
 const consumption = (fromDate,toDate,deviceID,params="D",paramkey="GASENERGY")=>{
-  //GASENERGY
-  //EACTIVE
   const _url= `http://api.dexcell.com/v3/readings?from=${fromDate}&to=${toDate}&device_id=${deviceID}&parameter_key=${paramkey}&resolution=${params}&operation=DELTA`;
   console.log(_url);
   //const params={fromDate,toDate};
   const options={
     url : _url,
     headers: {
-      'x-dexcell-token' :"c0fd279531e5ab806330", // morrissons
+      'x-dexcell-token':generateToken.token, // morrissons
       "Accept": "application/json",
       'Accept-Charset': 'utf-8',
       'Content-Type': 'application/json'

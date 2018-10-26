@@ -2,24 +2,28 @@ import React,{Component} from "react";
 import {Button, DatePicker} from "antd";
 import PropTypes from "prop-types";
 import DataSelect from "../DataSelect/DataSelect";
-import {getConsumptionData} from "../../API/getConsumptionData";
+import {currentYearGasConsumption,previousYearGasConsumption} from "../../API/gasConsumpiton";
 const dateFormat = `YYYY-MM-DD`;
 class OBToolReport extends Component{
   state={
     iconLoading:false,
-
+    reportDate: "",
   };
 
   enterIconLoading = () => {
-    this.setState({ iconLoading: true });
+    const {reportDate } = this.state;
+    //this.setState({ iconLoading: true });
+    console.log(reportDate);
+    const finaalData= reportDate !== undefined ? {
+      currentYearData:  currentYearGasConsumption(reportDate) ,
+      previousYearData: previousYearGasConsumption(reportDate)
+    } : "";
+    console.log("finalData",finaalData);
   };
-  dateChange=(e,s)=>{
-    console.log(e,s);
-    const data= getConsumptionData(s,"GAS").then(function(values){
-      console.log("last one",values);
-      console.log("inside layout",values.all)
+  dateChange=async(e,value)=>{
+   await this.setState((prevState)=>{
+      return prevState.reportDate !== value ? {reportDate:value}: prevState
     });
-    console.log(data);
   };
 
   render(){
