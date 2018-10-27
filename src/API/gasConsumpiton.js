@@ -1,19 +1,15 @@
 "use strict";
 const {getConsumptionData}=require("./getConsumptionData");
 const gasData =require("../Data/gasData");
+const returnDataPromise=(data)=>data;
 const currentYearGasConsumption=async(date)=>{
-  console.log("dateeee",date);
-  getConsumptionData(date,"GAS",gasData,false).then((currentYearData)=>{
-    return currentYearData;
-  });
+  return await getConsumptionData(date,"GAS",gasData,false).then(returnDataPromise);
 };
 
 const previousYearGasConsumption =async (date)=>{
-  console.log("dateeee",date);
-   await getConsumptionData(date,"GAS",gasData,true).then((previousYearData)=>{
-    return previousYearData;
-  });
+ return await getConsumptionData(date,"GAS",gasData,true).then(returnDataPromise);
 };
+
 module.exports={
   currentYearGasConsumption:currentYearGasConsumption,
   previousYearGasConsumption: previousYearGasConsumption

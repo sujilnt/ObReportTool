@@ -10,7 +10,7 @@ class OBToolReport extends Component{
     reportDate: "",
   };
 
-  enterIconLoading = () => {
+  enterIconLoading =async () => {
     const {reportDate } = this.state;
     //this.setState({ iconLoading: true });
     console.log(reportDate);

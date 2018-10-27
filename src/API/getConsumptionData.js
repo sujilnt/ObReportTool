@@ -13,7 +13,6 @@ const getConsumptionData=async (reportDate="2018-10-14" ,type,dataToFilter,previ
   const filteredLocations= await filteredEmptyLocation.map(async (row)=>{
     const fromDate=previousYear === true ? lastYear(row.optimisedDate): convertDate(row.optimisedDate);
     const toDate = previousYear === true ? lastYear(reportDate): convertDate(row.optimisedDate);
-    console.log(fromDate,toDate);
       const reference_devices = row.reference_devices.filter((row)=>row.type===deviceType);
       if(reference_devices[0] !== undefined && typeof(reference_devices)==="object") {
           const deviceId = reference_devices[0].device.id;
@@ -22,6 +21,8 @@ const getConsumptionData=async (reportDate="2018-10-14" ,type,dataToFilter,previ
         });
         let totalconsumption = row.totalConsumption = await totalKWH(consumptionPromise);
         totalconsumption !== 0 && totalconsumption !== "0" ? finalConsumptionData.push(row) : "";
+        const queryDate= row.queryDate = {fromDate,toDate};
+        const queryType=row.queryType=type;
         return row;
     }
   });
