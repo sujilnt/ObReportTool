@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React from "react";
 import {sideBarData} from "../../API/sideBarData";
 import { Layout, Menu, Icon } from 'antd';
 import {Link} from "react-router-dom";
@@ -25,7 +25,7 @@ const renderSubMenu = (data)=>{
 };
 
 const OBToolSidebar = ()=>{
-  console.log(sideBarData);
+  console.log("side",sideBarData);
   return (
     <div>
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">

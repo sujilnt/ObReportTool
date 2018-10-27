@@ -11,6 +11,9 @@ const generateToken=()=>{
   },{
     token:"a3d31f5dac2ac21e326c",
     name:"Morrisons"
+  },{
+    token:"bd43541eeff752d5125a",
+    name:"Morrisons"
   }];
   return tokenArr[Math.floor(Math.random() * tokenArr.length)];
 };

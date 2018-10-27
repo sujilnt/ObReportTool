@@ -3,10 +3,6 @@ import { Select } from 'antd';
 import {reports} from "../../API/reportData";
 const Option = Select.Option;
 
-const handleChange=(value)=>{
-  console.log(`selected ${value}`);
-};
-
 const renderOptions=(data)=>{
   const optionArr=[];
   typeof(data) === "object" ?
@@ -17,9 +13,10 @@ const renderOptions=(data)=>{
 };
 
 
-const DataSelect=()=>{
+const DataSelect=(props)=>{
+  const {onChangeSelectOption}=props;
   return(<div>
-    <Select defaultValue="electricity" style={{ width: 175 }} onChange={handleChange}>
+    <Select defaultValue="EACTIVE" style={{ width: 175 }} onChange={onChangeSelectOption}>
       {renderOptions(reports)}
     </Select>
   </div>);

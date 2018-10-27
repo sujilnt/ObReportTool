@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Layout} from 'antd';
 import {HashRouter,Switch,Link,Route,Router} from "react-router-dom";
 import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
@@ -11,7 +11,7 @@ import "./Layout.css";
 const { Sider } = Layout;
 
 console.log(window.location);
-class SiderDemo extends React.Component {
+class SiderDemo extends PureComponent {
   state = {
     collapsed: false,
   };

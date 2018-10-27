@@ -11,6 +11,7 @@ const previousYearGasConsumption =async (date)=>{
 };
 
 module.exports={
-  currentYearGasConsumption:currentYearGasConsumption,
+  currentYearGasConsumption: currentYearGasConsumption,
   previousYearGasConsumption: previousYearGasConsumption
 };
+
