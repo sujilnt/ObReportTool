@@ -7,7 +7,7 @@ const currentYearGasConsumption=async(date)=>{
 };
 
 const previousYearGasConsumption =async (date)=>{
- return await getConsumptionData(date,"GAS",gasData,true).then(returnDataPromise);
+ return await getConsumptionData(date.trim(),"GAS",gasData,true).then(returnDataPromise);
 };
 
 module.exports={
