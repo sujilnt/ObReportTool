@@ -63,7 +63,7 @@ class OBToolReport extends PureComponent{
   };
 
   render(){
-    console.log("currentState",this.state);
+    const {reportDate,tableData,reportType}=this.state;
     return(
       <div>
         <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
@@ -83,7 +83,11 @@ class OBToolReport extends PureComponent{
         </div>
       </div>
       <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer">
-        <OBToolReportTab  tabledata={this.state.tableData}/>
+        <OBToolReportTab
+          tabledata={tableData}
+          reportType={reportType}
+          reportDate={reportDate}
+        />
       </div>
     </div>
     );
