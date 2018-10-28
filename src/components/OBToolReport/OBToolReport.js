@@ -3,6 +3,7 @@ import React,{PureComponent} from "react";
 import {Button, DatePicker} from "antd";
 import PropTypes from "prop-types";
 import DataSelect from "../DataSelect/DataSelect";
+import OBToolReportTab from "../OBToolReportTab/OBToolReportTab";
 import {currentYearGasConsumption,previousYearGasConsumption} from "../../API/gasConsumpiton";
 import{currentYearElectricityConsumption,previousYearElectricityConsumption} from "../../API/electricityConsumption";
 const dateFormat = `YYYY-MM-DD`;
@@ -11,8 +12,7 @@ class OBToolReport extends PureComponent{
     iconLoading:false,
     reportDate: "",
     reportType:"EACTIVE",
-    gasData:[],
-    electricityData:[]
+    tableData:[]
   };
   fetchGasDetails=()=>{
     const {reportDate} = this.state;
@@ -20,7 +20,11 @@ class OBToolReport extends PureComponent{
       currentYearData:  currentYearGasConsumption(reportDate) ,
       previousYearData: previousYearGasConsumption(reportDate)
     } : "";
-    console.log("fetchGasDetails",finalData);
+    this.setState(()=>{
+      return {
+        tableData: finalData
+      }
+    })
   };
   fetchElectricityDetails=()=>{
     const {reportDate} = this.state;
@@ -29,6 +33,11 @@ class OBToolReport extends PureComponent{
       previousYearData: previousYearElectricityConsumption(reportDate)
     } : "";
     console.log("fetchElectricityDetails",finalData);
+    this.setState(()=>{
+      return {
+        tableData: finalData
+      }
+    })
   };
 
   fetchaApiResults = (type)=>{
@@ -57,7 +66,7 @@ class OBToolReport extends PureComponent{
     console.log("currentState",this.state);
     return(
       <div>
-        <div style={{ padding: 24, background: '#fff', minHeight: 360 }} className="contentContainer">
+        <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
           <div className="contentItem">
           <DatePicker format={dateFormat} onChange={this.dateChange}/>
         </div>
@@ -72,6 +81,9 @@ class OBToolReport extends PureComponent{
             Generate Report
           </Button>
         </div>
+      </div>
+      <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer">
+        <OBToolReportTab  tabledata={this.state.tableData}/>
       </div>
     </div>
     );

@@ -11,7 +11,7 @@ const getConsumptionData=async (reportDate="2018-10-14" ,type,dataToFilter,previ
   const finalConsumptionData=[];
   const filteredEmptyLocation= await filterData(dataToFilter); //change to getAllLocations //gasData
   const filteredLocations= await filteredEmptyLocation.map(async (row)=>{
-    const fromDate=await previousYear === true ? lastYear(row.optimisedDate): convertDate(row.optimisedDate);
+    const fromDate=await previousYear === true ? lastYear(row.optimisedDate) : convertDate(row.optimisedDate);
     const toDate = await previousYear === true ? lastYear(reportDate): convertDate(reportDate);
       const reference_devices = row.reference_devices.filter((row)=>row.type===deviceType);
       if(reference_devices[0] !== undefined && typeof(reference_devices) ==="object" && row.optimisedDate) {
