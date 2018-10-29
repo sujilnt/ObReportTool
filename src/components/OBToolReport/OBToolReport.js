@@ -12,13 +12,13 @@ class OBToolReport extends PureComponent{
     iconLoading:false,
     reportDate: "",
     reportType:"EACTIVE",
-    tableData:[]
+    tableData: []
   };
-  fetchGasDetails=()=>{
+  fetchGasDetails=async()=>{
     const {reportDate} = this.state;
     const finalData= reportDate !== undefined ? {
-      currentYearData:  currentYearGasConsumption(reportDate) ,
-      previousYearData: previousYearGasConsumption(reportDate)
+      currentYearData: await currentYearGasConsumption(reportDate).then(data=> data)  ,
+      previousYearData: await previousYearGasConsumption(reportDate).then(data=>data)
     } : "";
     this.setState(()=>{
       return {
@@ -26,11 +26,11 @@ class OBToolReport extends PureComponent{
       }
     })
   };
-  fetchElectricityDetails=()=>{
+  fetchElectricityDetails=async()=>{
     const {reportDate} = this.state;
     const finalData= reportDate !== undefined ? {
-      currentYearData:  currentYearElectricityConsumption(reportDate) ,
-      previousYearData: previousYearElectricityConsumption(reportDate)
+      currentYearData:  await currentYearElectricityConsumption(reportDate).then(data=> data) ,
+      previousYearData: await previousYearElectricityConsumption(reportDate).then(data=> data)
     } : "";
     console.log("fetchElectricityDetails",finalData);
     this.setState(()=>{
@@ -45,6 +45,10 @@ class OBToolReport extends PureComponent{
        type==="GASENERGY" ? this.fetchGasDetails() : this.fetchElectricityDetails()
       : "currently focusing only reports on Electricity and Gas "
   };
+  /*renderObTab=(reportDate,tableData,reportType)=>{
+    console.log("called",tableData);
+    return();
+  }*/
   enterIconLoading =async () => {
     //this.setState({ iconLoading: true });
     //const typeofReport=
@@ -82,13 +86,16 @@ class OBToolReport extends PureComponent{
           </Button>
         </div>
       </div>
-      <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer">
-        <OBToolReportTab
-          tabledata={tableData}
-          reportType={reportType}
-          reportDate={reportDate}
-        />
-      </div>
+        {tableData.length < 1 ? "" :
+          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer">
+          <OBToolReportTab
+            tabledata={tableData}
+            reportType={reportType}
+            reportDate={reportDate}
+
+          />
+        </div>
+        }
     </div>
     );
   }

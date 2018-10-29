@@ -33,7 +33,7 @@ const lastYear=(date="2018-09-28")=>{
   const currentDate = new Date(date);
   const currentYear = currentDate.getFullYear();
   const previuosYear= currentDate.setFullYear(currentYear-1);
-  return convertDate(currentDate);
+  return currentDate;
 };
 
 module.exports= {

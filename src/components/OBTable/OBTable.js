@@ -1,3 +1,4 @@
+"use strict";
 import React,{PureComponent} from "react";
 import { Spin, Alert,Table } from 'antd';
 const columns=[
@@ -10,9 +11,9 @@ const columns=[
     dataIndex: 'queryType',
     key: 'queryType',
   },{
-    title: 'Type',
-    dataIndex: 'Type',
-    key: 'type',
+    title: 'TO Date',
+    dataIndex: 'reportDate',
+    key: 'reportDate',
   }, {
     title: 'Name',
     dataIndex: 'name',
@@ -27,62 +28,43 @@ const columns=[
     key: 'totalConsumption',
   }
 ];
-class OBTable extends PureComponent{
-  state={
-    rowData:[],
-    loading:true
-  };
-  renderLoaderComponent=(reportType,reportDate)=>{
-    const reportFor= reportType ==="EACTIVE" ? "electricity" : "GAS" ;
-    return (
-      <div>
-        <Spin tip="Loading...">
-          <Alert
-            message={`Retrieving Data ${reportFor} upto the Date ${reportDate}`}
-            description="Showing Results...."
-            type="info"
-          />
-        </Spin>
-      </div>
-    )
-  };
-  renderTable= (currentYearData)=>{
-    return (<div style={{height:"100%"}}>
-      <Table
-        columns={columns}
-        dataSource={currentYearData}
-        pagination={true}
-        pageSize={20}
-        bordered={true}
-      /></div>)
-  };
-  componentWillReceiveProps =(props)=>{
-    const {currentYearData}=props;
-    currentYearData ? currentYearData.then((response)=>{
-      const removedUndefinedData = response.filter((data)=>data!== undefined);
-      this.setState((prevState)=>{
-        return {
-          rowData:removedUndefinedData,
-          loading: false
-        }
-      });
-    }): "" ;
-
-  };
-  render(){
-    const {rowData,loading}=this.state;
-    const {reportType,reportDate}=this.props;
-    console.log(this.state.rowData,this.state.loading);
-    return (
-      <div>
-        {
-          this.state.loading &&this.state.rowData ?
-            this.renderLoaderComponent(reportType,reportDate)
-            :this.renderTable(rowData)
-        }
-      </div>
-    )
-  }
+const renderLoaderComponent=(reportType,reportDate)=>{
+  const reportFor= reportType ==="EACTIVE" ? "electricity" : "GAS" ;
+  return (
+    <div>
+      <Spin tip="Loading...">
+        <Alert
+          message={`Retrieving Data ${reportFor} upto the Date ${reportDate}`}
+          description="Showing Results...."
+          type="info"
+        />
+      </Spin>
+    </div>
+  )
+};
+const renderTable= (currentYearData)=>{
+  return (<div style={{height:"100%"}}>
+    <Table
+      columns={columns}
+      dataSource={currentYearData}
+      pagination={true}
+      pageSize={20}
+      bordered={true}
+    /></div>)
+};
+ const OBTable=(props)=>{
+   const {YearData}=props;
+   const removeFalseValues = YearData.filter((data)=>data!== undefined);
+   console.log("props",[removeFalseValues],removeFalseValues);
+   return (
+     <div>
+       {
+         removeFalseValues.length < 1?
+           renderLoaderComponent(reportType,reportDate)
+           :renderTable(removeFalseValues)
+       }
+     </div>
+   )
 };
 export default OBTable;
 /**
