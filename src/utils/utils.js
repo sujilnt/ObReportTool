@@ -29,7 +29,7 @@ const totalKWH = (data)=>{
   return numberFormatter(sum) !== 0 ? numberFormatter(sum) : 0 ;
 };
 
-const lastYear=(date="2018-09-28")=>{
+const lastYear=(date)=>{
   const currentDate = new Date(date);
   const currentYear = currentDate.getFullYear();
   const previuosYear= currentDate.setFullYear(currentYear-1);

@@ -4,8 +4,8 @@ import {Button, DatePicker} from "antd";
 import PropTypes from "prop-types";
 import DataSelect from "../DataSelect/DataSelect";
 import OBToolReportTab from "../OBToolReportTab/OBToolReportTab";
-import {currentYearGasConsumption,previousYearGasConsumption} from "../../API/gasConsumpiton";
-import{currentYearElectricityConsumption,previousYearElectricityConsumption} from "../../API/electricityConsumption";
+import {gasConsumption} from "../../API/gasConsumpiton";
+import{electricityConsumption} from "../../API/electricityConsumption";
 const dateFormat = `YYYY-MM-DD`;
 class OBToolReport extends PureComponent{
   state={
@@ -16,10 +16,7 @@ class OBToolReport extends PureComponent{
   };
   fetchGasDetails=async()=>{
     const {reportDate} = this.state;
-    const finalData= reportDate !== undefined ? {
-      currentYearData: await currentYearGasConsumption(reportDate).then(data=> data)  ,
-      previousYearData: await previousYearGasConsumption(reportDate).then(data=>data)
-    } : "";
+    const finalData= reportDate !== undefined ? await gasConsumption(reportDate).then(data=>data): "";
     this.setState(()=>{
       return {
         tableData: finalData
@@ -28,10 +25,7 @@ class OBToolReport extends PureComponent{
   };
   fetchElectricityDetails=async()=>{
     const {reportDate} = this.state;
-    const finalData= reportDate !== undefined ? {
-      currentYearData:  await currentYearElectricityConsumption(reportDate).then(data=> data) ,
-      previousYearData: await previousYearElectricityConsumption(reportDate).then(data=> data)
-    } : "";
+    const finalData= reportDate !== undefined ?  await electricityConsumption(reportDate).then(data=>data) : "";
     console.log("fetchElectricityDetails",finalData);
     this.setState(()=>{
       return {

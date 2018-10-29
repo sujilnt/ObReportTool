@@ -4,16 +4,16 @@ import { Spin, Alert,Table } from 'antd';
 const columns=[
   {
     title: 'Id',
-    dataIndex: 'id',
-    key: 'id',
+    dataIndex: 'key',
+    key: 'key',
   },{
     title: 'Query',
     dataIndex: 'queryType',
     key: 'queryType',
   },{
     title: 'TO Date',
-    dataIndex: 'reportDate',
-    key: 'reportDate',
+    dataIndex: 'toDate',
+    key: 'toDate',
   }, {
     title: 'Name',
     dataIndex: 'name',
