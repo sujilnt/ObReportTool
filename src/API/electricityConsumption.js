@@ -1,6 +1,7 @@
 "use strict";
 const  getAlllocations =require("../Data/getAlllocations.json");
 const {getConsumptionData}=require("./getConsumptionData");
+const {createJson} = require("../utils/createJson");
 const returnDataPromise=async(listofPromises)=>{
   return await Promise.all(listofPromises).then((data)=>data.filter((row)=> row !== undefined))
   };
@@ -14,7 +15,8 @@ const previousYearElectricityConsumption =async (date)=>{
 const electricityConsumption = async(date)=>{
   const currentYearValue = await currentYearElectricityConsumption(date).then(returnDataPromise);
   const previousYearValue = await previousYearElectricityConsumption(date).then(returnDataPromise);
-  console.log("data.......",currentYearValue,previousYearValue);
+  const writethisYear = createJson("thisYear",currentYearValue);
+  const previousYear = createJson("previousYear",previousYearValue);
   return {currentYear: currentYearValue,previousYear: previousYearValue};
 };
 module.exports={
