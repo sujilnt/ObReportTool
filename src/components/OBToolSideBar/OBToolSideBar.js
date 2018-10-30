@@ -27,7 +27,7 @@ const renderSubMenu = (data)=>{
 const OBToolSidebar = ()=>{
   console.log("side",sideBarData);
   return (
-    <div>
+    <div className="card">
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
           {renderSubMenu(sideBarData)}
         </Menu>

@@ -12,7 +12,7 @@ class OBToolcontent extends Component{
 
   render(){
     return (
-      <div>
+      <div className="card">
         {!this.state.loading ? <Content style={{ margin: '0 16px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Report</Breadcrumb.Item>

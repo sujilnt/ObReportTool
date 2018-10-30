@@ -63,7 +63,7 @@ class OBToolReport extends PureComponent{
   render(){
     const {reportDate,tableData,reportType}=this.state;
     return(
-      <div>
+      <div className="card">
         <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
           <div className="contentItem">
           <DatePicker format={dateFormat} onChange={this.dateChange}/>
@@ -81,12 +81,11 @@ class OBToolReport extends PureComponent{
         </div>
       </div>
         {tableData.length < 1 ? "" :
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer">
+          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
           <OBToolReportTab
             tabledata={tableData}
             reportType={reportType}
             reportDate={reportDate}
-
           />
         </div>
         }

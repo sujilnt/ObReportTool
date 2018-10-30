@@ -1,6 +1,7 @@
 "use strict";
 import React,{PureComponent} from "react";
 import { Spin, Alert,Table } from 'antd';
+import CSVButton from "../csvButton/CSVButton";
 const columns=[
   {
     title: 'Id',
@@ -44,6 +45,10 @@ const renderLoaderComponent=(reportType,reportDate)=>{
 };
 const renderTable= (currentYearData)=>{
   return (<div style={{height:"100%"}}>
+    <CSVButton
+      columns={columns}
+      dataSource={currentYearData}
+    />
     <Table
       columns={columns}
       dataSource={currentYearData}

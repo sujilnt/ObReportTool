@@ -8,7 +8,7 @@ class OBToolHeader extends Component{
       update:false,
   };
   render(){
-    return(<div>
+    return(<div className="card">
       {!this.state.loading ?
         <Header style={{background: '#fff', padding: 0}}>
           <div className="container">

@@ -141,8 +141,6 @@ const data = [
   "Tavistock Plymouth Rd",
   "Bodmin Priory Rd"
 
-
-
 ];
 const gasData=[];
 getAlllocations.map((rowName)=>{

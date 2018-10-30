@@ -3,7 +3,7 @@ const {convertDate,totalKWH,lastYear} = require("../utils/utils");
 const {consumption} = require("./consumption");
 const {filterData}= require("./filterData");
 const {createJson} = require("../utils/createJson");
-const {csvconverter} = require("../utils/csvconverter");
+//const {csvconverter} = require("../utils/csvconverter");
 const managingDate = (previousYear,date)=>{
   return  previousYear === "lastYear" ? convertDate(lastYear(date)) : convertDate(date);
 };

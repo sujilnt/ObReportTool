@@ -1,3 +1,5 @@
+const blob = require("blob");
+const navigaotor = require("blob");
 /*
 * convertDate() -> covert a normal date and ISO date and split the time section
 * @params dateInput
@@ -34,6 +36,14 @@ const lastYear=(date)=>{
   const currentYear = currentDate.getFullYear();
   const previuosYear= currentDate.setFullYear(currentYear-1);
   return currentDate;
+};
+
+const csvExport = (data)=>{
+  const newblob = new Blob(data,{
+    type: "text/csv;charset=utf-8;"
+  });
+
+  navigator.msSaveBlob(newblob, "filename.csv")
 };
 
 module.exports= {
