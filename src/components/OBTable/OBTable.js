@@ -57,15 +57,17 @@ const renderTable= (currentYearData)=>{
    const {YearData}=props;
    return (
      <div>
+       <div className="csvbutton">
+       <CSVButton
+         columns={columns}
+         dataSource={YearData}
+       />
+       </div>
        {
          YearData.length < 1?
            renderLoaderComponent(reportType,reportDate)
            :renderTable(YearData)
        }
-       <CSVButton
-         columns={columns}
-         dataSource={YearData}
-       />
      </div>
    )
 };

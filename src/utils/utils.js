@@ -1,4 +1,3 @@
-
 /*
 * convertDate() -> covert a normal date and ISO date and split the time section
 * @params dateInput
@@ -37,18 +36,9 @@ const lastYear=(date)=>{
   return currentDate;
 };
 
-const csvExport = (data)=>{
-  const newblob = new Blob(data,{
-    type: "text/csv;charset=utf-8;"
-  });
-
-  navigator.msSaveBlob(newblob, "filename.csv")
-};
-
 module.exports= {
   convertDate: convertDate,
   numberFormatter: numberFormatter,
   totalKWH:totalKWH,
-  csvExport:csvExport,
   lastYear:lastYear
 };
