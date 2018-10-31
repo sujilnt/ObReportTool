@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from 'antd';
 import CsvDownloader from 'react-csv-downloader';
+import PropTypes from "prop-types";
+// coumn Header
 const headerColumn=  [
   {
     id: "fromData",
@@ -32,7 +34,11 @@ const headerColumn=  [
     displayName: "totalConsumption"
   }
 ];
-
+/*
+*  generateFileName : - > A function that generates fileNames .
+*  input : data Object
+*  return names => nameofQueryType and Year
+* */
 const generateFileName = (data)=>{
   const firstElement= data[0];
   const firReportName= firstElement.queryType;
@@ -58,4 +64,7 @@ const CSVButton=(props)=>{
   )
 };
 export default CSVButton;
+CSVButton.PropTypes={
+  dataSource: PropTypes.object.isRequired
+};
 

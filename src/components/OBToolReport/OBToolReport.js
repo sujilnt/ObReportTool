@@ -79,8 +79,6 @@ class OBToolReport extends PureComponent{
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
           <OBToolReportTab
             tabledata={tableData}
-            reportType={reportType}
-            reportDate={reportDate}
           />
         </div>
         }

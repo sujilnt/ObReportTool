@@ -2,6 +2,8 @@
 import React,{PureComponent} from "react";
 import { Spin, Alert,Table } from 'antd';
 import CSVButton from "../csvButton/CSVButton";
+import PropTypes from "prop-types";
+
 const columns=[
   {
     title: 'Id',
@@ -29,14 +31,13 @@ const columns=[
     key: 'totalConsumption',
   }
 ];
-const renderLoaderComponent=(reportType,reportDate)=>{
-  const reportFor= reportType ==="EACTIVE" ? "electricity" : "GAS" ;
+const renderLoaderComponent=()=>{
   return (
     <div>
-      <Spin tip="Loading...">
+      <Spin tip="No data ">
         <Alert
-          message={`Retrieving Data ${reportFor} upto the Date ${reportDate}`}
-          description="Showing Results...."
+          message="Press Shift + ctrl + I , see the console for the eroor"
+          description="Server Down"
           type="info"
         />
       </Spin>
@@ -64,14 +65,15 @@ const renderTable= (currentYearData)=>{
        />
        </div>
        {
-         YearData.length < 1?
-           renderLoaderComponent(reportType,reportDate)
+         YearData.length < 1 || YearData === undefined ?
+           renderLoaderComponent()
            :renderTable(YearData)
        }
      </div>
    )
 };
 export default OBTable;
-/**
- *
- * */
+OBTable.PropTypes={
+  YearData: PropTypes.object.isRequired
+};
+

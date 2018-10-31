@@ -1,16 +1,22 @@
 import React from "react";
 import { Tabs} from 'antd';
-const TabPane = Tabs.TabPane;
 import OBTable from "../OBTable/OBTable"; //Table Component
+import PropTypes from "prop-types";
+
+const TabPane = Tabs.TabPane; // TabPans
+
 /*
 * renderTabPane () => Its geneators tabs based on the data ,
 * here data is either last year or currentYear .
 * */
 const renderTabPane = (data)=>{
   const listofTabPane=[];
-  Object.keys(data).forEach((row,index)=>{
+  Object.keys(data).forEach((row)=>{
+    const splitName = row.split("Year")[0];
+    const firstName= splitName.charAt(0).toLocaleUpperCase() + splitName.substr(1);
+    const name = `${firstName} Year Data`;
     listofTabPane.push(
-      <TabPane tab={row} key={`${row}`}>
+      <TabPane tab={name} key={`${row}`}>
         <OBTable
           YearData={data[row]}
         /></TabPane>
@@ -35,5 +41,9 @@ const  OBToolReportTab =(props)=>{
     </div>);
 };
 export default OBToolReportTab;
+OBToolReportTab.propTypes ={
+  tabledata : PropTypes.object.isRequired
+};
+
 
 
