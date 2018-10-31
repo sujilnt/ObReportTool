@@ -26,12 +26,10 @@ const getConsumptionData=(reportDate,type,dataToFilter,previousYear,params="D",p
             return await values.statusCode === 200 ? JSON.parse(values.body).values: "";
         });
         let totalconsumption = newrow.totalConsumption = await totalKWH(consumptionPromise);
-        console.log("newrow",newrow);
         totalconsumption !== 0 && totalconsumption !== "0" ? finalConsumptionData.push(newrow) : "";
         return newrow;
     }
   });
-  console.log("location",previousYear,filteredLocations);
   return filteredLocations;
 };
 module.exports.getConsumptionData = getConsumptionData;

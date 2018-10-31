@@ -15,8 +15,8 @@ const previousYearElectricityConsumption =async (date)=>{
 const electricityConsumption = async(date)=>{
   const currentYearValue = await currentYearElectricityConsumption(date).then(returnDataPromise);
   const previousYearValue = await previousYearElectricityConsumption(date).then(returnDataPromise);
-  const writethisYear = createJson("thisYear",currentYearValue);
-  const previousYear = createJson("previousYear",previousYearValue);
+  //const writethisYear = createJson("thisYear",currentYearValue);
+ // const previousYear = createJson("previousYear",previousYearValue);
   return {currentYear: currentYearValue,previousYear: previousYearValue};
 };
 module.exports={

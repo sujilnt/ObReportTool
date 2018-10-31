@@ -1,5 +1,4 @@
-const blob = require("blob");
-const navigaotor = require("blob");
+
 /*
 * convertDate() -> covert a normal date and ISO date and split the time section
 * @params dateInput
@@ -50,5 +49,6 @@ module.exports= {
   convertDate: convertDate,
   numberFormatter: numberFormatter,
   totalKWH:totalKWH,
+  csvExport:csvExport,
   lastYear:lastYear
 };

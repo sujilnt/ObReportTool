@@ -45,10 +45,6 @@ const renderLoaderComponent=(reportType,reportDate)=>{
 };
 const renderTable= (currentYearData)=>{
   return (<div style={{height:"100%"}}>
-    <CSVButton
-      columns={columns}
-      dataSource={currentYearData}
-    />
     <Table
       columns={columns}
       dataSource={currentYearData}
@@ -59,15 +55,17 @@ const renderTable= (currentYearData)=>{
 };
  const OBTable=(props)=>{
    const {YearData}=props;
-   const removeFalseValues = YearData.filter((data)=>data!== undefined);
-   console.log("props",[removeFalseValues],removeFalseValues);
    return (
      <div>
        {
-         removeFalseValues.length < 1?
+         YearData.length < 1?
            renderLoaderComponent(reportType,reportDate)
-           :renderTable(removeFalseValues)
+           :renderTable(YearData)
        }
+       <CSVButton
+         columns={columns}
+         dataSource={YearData}
+       />
      </div>
    )
 };

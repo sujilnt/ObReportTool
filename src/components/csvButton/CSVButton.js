@@ -1,22 +1,60 @@
 import React from "react";
 import { Button } from 'antd';
-import {csvExport} from "../../utils/utils";
-const downloadCsv = (data,fileName)=>{
-  csvExport(data,fileName);
-};
+import CsvDownloader from 'react-csv-downloader';
+const headerColumn=  [
+  {
+    id: "fromData",
+    displayName: "fromData",
+  }
+  , {
+    id: "toDate",
+    displayName:"toDate"
+  },
+  {
+    displayName: "queryType",
+    id: "queryType"
+
+  } ,
+  {
+    id: "key",
+    displayName: "key"
+  },
+  {
+    id: "name",
+    displayName: "name"
+  },
+  {
+    id: "optimisedDate",
+    displayName:"optimisedDate"
+  },
+  {
+    id:"totalConsumption",
+    displayName: "totalConsumption"
+  }
+];
+
 const generateFileName = (data)=>{
   const firstElement= data[0];
-  const firReportName= firstElement.type;
+  const firReportName= firstElement.queryType;
   const secondName = firstElement["fromDate"].split("-")[0];
-  return `${firReportName}${secondName}.csv`
+  const name = `${firReportName}${secondName}.csv`;
+  return name;
 };
 const CSVButton=(props)=>{
-  const headerColumn=  {fromDate: "fromData" , toDate:"toDate",queryType: "queryType" ,key: "key", name: "name" , optimisedDate:"optimisedDate", totalConsumption:"totalConsumption" };
   const dataSource= props.dataSource;
-  const data = dataSource.unshift(headerColumn);
   const fileName = generateFileName(dataSource);
   return(
-    <Button type="primary" icon="download" size={"small"} onClick={downloadCsv(data,fileName)}>csvDownload</Button>
+    <div>
+      <CsvDownloader
+        filename={fileName}
+        separator=","
+        columns={headerColumn}
+        datas={dataSource}
+        text="DOWNLOAD"
+      >
+        <Button type="primary" icon="download" size={"small"} >csv export</Button>
+      </CsvDownloader>
+    </div>
   )
 };
 export default CSVButton;

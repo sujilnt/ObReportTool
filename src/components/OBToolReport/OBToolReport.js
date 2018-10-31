@@ -39,14 +39,9 @@ class OBToolReport extends PureComponent{
        type==="GASENERGY" ? this.fetchGasDetails() : this.fetchElectricityDetails()
       : "currently focusing only reports on Electricity and Gas "
   };
-  /*renderObTab=(reportDate,tableData,reportType)=>{
-    console.log("called",tableData);
-    return();
-  }*/
+
   enterIconLoading =async () => {
     //this.setState({ iconLoading: true });
-    //const typeofReport=
-    console.log(this.state.reportType);
     this.fetchaApiResults(this.state.reportType);
   };
   selectChange=(value)=>{

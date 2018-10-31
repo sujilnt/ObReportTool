@@ -12,10 +12,11 @@ class OBToolReportTab extends Component{
   renderTabPane = (data)=>{
     const listofTabPane=[];
     Object.keys(data).forEach((row,index)=>{
+      console.log(data,data[row],index, "BO report");
       listofTabPane.push(
         <TabPane tab={row} key={`${row}${index}`}>
           <OBTable
-          YearData={results}
+          YearData={data[row]}
         /></TabPane>
       );
     });
