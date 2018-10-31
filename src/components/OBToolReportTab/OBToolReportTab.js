@@ -1,42 +1,38 @@
-import React,{Component} from "react";
-import { Tabs, Radio} from 'antd';
-import OBTable from "../OBTable/OBTable";
+import React from "react";
+import { Tabs} from 'antd';
 const TabPane = Tabs.TabPane;
-class OBToolReportTab extends Component{
-  state={
-    activeKey: "previousYearData1"
-  };
-  changetab= (activeKey) => {
-    this.setState({ activeKey });
-  };
-  renderTabPane = (data)=>{
-    const listofTabPane=[];
-    Object.keys(data).forEach((row,index)=>{
-      console.log(data,data[row],index, "BO report");
-      listofTabPane.push(
-        <TabPane tab={row} key={`${row}${index}`}>
-          <OBTable
+import OBTable from "../OBTable/OBTable"; //Table Component
+/*
+* renderTabPane () => Its geneators tabs based on the data ,
+* here data is either last year or currentYear .
+* */
+const renderTabPane = (data)=>{
+  const listofTabPane=[];
+  Object.keys(data).forEach((row,index)=>{
+    listofTabPane.push(
+      <TabPane tab={row} key={`${row}`}>
+        <OBTable
           YearData={data[row]}
         /></TabPane>
-      );
-    });
-    return listofTabPane;
-  };
-  render(){
-    const {tabledata}=this.props;
-    return(
-      <div>
-
-        <Tabs
-          activeKey={this.state.activeKey}
-          tabPosition={"top"}
-          style={{ minHeight: 220 }}
-          onChange={this.changetab}
-        >
-          {this.renderTabPane(tabledata)}
-        </Tabs>
-      </div>)
-  }
+    );
+  });
+  return listofTabPane;
+};
+/*
+* A stateless component that render Tab Component
+* */
+const  OBToolReportTab =(props)=>{
+  const {tabledata}=props;
+  return(
+    <div>
+      <Tabs
+        defaultActiveKey={"currentYear"}
+        tabPosition={"top"}
+        style={{ minHeight: 220 }}
+      >
+        {renderTabPane(tabledata)}
+      </Tabs>
+    </div>);
 };
 export default OBToolReportTab;
 

@@ -52,7 +52,7 @@ const CSVButton=(props)=>{
         datas={dataSource}
         text="DOWNLOAD"
       >
-        <Button type="primary" icon="download" size={"medium"} >csv export</Button>
+        <Button type="primary" icon="download" size={"default"} >csv export</Button>
       </CsvDownloader>
     </div>
   )
