@@ -73,7 +73,7 @@ const renderTable= (currentYearData)=>{
    )
 };
 export default OBTable;
-OBTable.PropTypes={
+OBTable.propTypes={
   YearData: PropTypes.object.isRequired
 };
 
