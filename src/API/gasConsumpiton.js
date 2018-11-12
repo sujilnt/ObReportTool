@@ -1,6 +1,7 @@
 "use strict";
 const {getConsumptionData}=require("./getConsumptionData");
-const gasData =require("../Data/gasData");
+//const gasData =require("../Data/gasData");
+const  gasData =require("../Data/getAlllocations.json");
 const {createJson} = require("../utils/createJson");
 const returnDataPromise=async(listofPromises)=>{
   return await Promise.all(listofPromises).then((data)=>data.filter((row)=> row !== undefined))
