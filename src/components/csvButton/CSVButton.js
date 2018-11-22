@@ -65,6 +65,6 @@ const CSVButton=(props)=>{
 };
 export default CSVButton;
 CSVButton.propTypes={
-  dataSource: PropTypes.object.isRequired
+  dataSource: PropTypes.array.isRequired
 };
 

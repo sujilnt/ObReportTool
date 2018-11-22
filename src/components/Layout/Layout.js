@@ -21,8 +21,8 @@ class SiderDemo extends PureComponent {
     this.setState({ collapsed });
   };
   UpdateData =(e)=>{
-    console.log("called");
-    getAlloptimisedDevices();
+    console.log("called",e);
+    getAlloptimisedDevices(e);
   };
 
   render() {

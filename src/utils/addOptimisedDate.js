@@ -10,7 +10,6 @@ const addOptimisedDate=(siteNames, deviceNames)=>{
      //siteNames.indexOf(row.name);
      return row;
   });
-
   const fileCreate = createJson("getAlllocations.json",finalData);
 };
 module.exports.addOptimisedDate=addOptimisedDate;
