@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import { Tag ,InputNumber ,Layout, Button } from 'antd';
+import {Tag, InputNumber, Layout, Button} from 'antd';
 import OBInputNumber from "../OBInputNumber/OBInputNumber";
 import PropTypes from 'prop-types';
 const { Header } = Layout;
-class OBToolHeader extends Component{
+class OBMorrissonsDataUpdate extends Component{
   state={
      loading:false,
       start: 1,
@@ -21,7 +21,7 @@ class OBToolHeader extends Component{
   };
   render(){
     const {limit,start}=this.state;
-    return(<div className="card">
+    return(<div>
       {!this.state.loading ?
         <Header style={{background: '#fff', padding: 0}}>
           <div className="container">
@@ -64,9 +64,9 @@ class OBToolHeader extends Component{
   }
 }
 
-export default OBToolHeader;
+export default OBMorrissonsDataUpdate;
 
-OBToolHeader.propTypes ={
+OBMorrissonsDataUpdate.propTypes ={
   onChange: PropTypes.func.isRequired,
 };
 

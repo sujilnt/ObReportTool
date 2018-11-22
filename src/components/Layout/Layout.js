@@ -4,7 +4,7 @@ import {HashRouter,Switch,Link,Route,Router} from "react-router-dom";
 import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
 import {getConsumptionData} from "../../API/getConsumptionData";
 import OBToolcontent from "../OBToolcontent/OBToolcontent";
-import OBToolHeader from "../OBToolHeader/OBToolHeader";
+import OBMorrissonsDataUpdate from "../OBMorrissonsDataUpdate/OBMorrissonsDataUpdate";
 import OBToolFooter from "../OBToolFooter/OBToolFooter";
 import OBToolSidebar from "../OBToolSideBar/OBToolSideBar";
 import "./Layout.css";
@@ -20,11 +20,7 @@ class SiderDemo extends PureComponent {
     console.log(collapsed);
     this.setState({ collapsed });
   };
-  UpdateData =(e)=>{
-    console.log("called",e);
-    getAlloptimisedDevices(e);
-  };
-
+  
   render() {
     return (
       <Layout style={{ minHeight: '100vh' }}>
@@ -38,9 +34,6 @@ class SiderDemo extends PureComponent {
           />
         </Sider>
         <Layout>
-          <OBToolHeader
-           onChange={this.UpdateData}
-          />
          <OBToolcontent />
           <OBToolFooter />
         </Layout>

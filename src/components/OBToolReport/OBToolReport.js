@@ -1,11 +1,13 @@
 "use strict";
 import React,{PureComponent} from "react";
-import {Button, DatePicker} from "antd";
+import {Button, DatePicker,Divider} from "antd";
 import PropTypes from "prop-types";
 import DataSelect from "../DataSelect/DataSelect";
 import OBToolReportTab from "../OBToolReportTab/OBToolReportTab";
 import {gasConsumption} from "../../API/gasConsumpiton";
 import{electricityConsumption} from "../../API/electricityConsumption";
+import OBMorrissonsDataUpdate from "../OBMorrissonsDataUpdate/OBMorrissonsDataUpdate";
+import {getAlloptimisedDevices} from "../../API/getAlloptimisedDevices";
 const dateFormat = `YYYY-MM-DD`;
 class OBToolReport extends PureComponent{
   state={
@@ -54,35 +56,44 @@ class OBToolReport extends PureComponent{
       return prevState.reportDate !== value ? {reportDate:value}: prevState;
     });
   };
-
+  UpdateData =(e)=>{
+    console.log("called",e);
+    getAlloptimisedDevices(e);
+  };
   render(){
     const {reportDate,tableData,reportType}=this.state;
     return(
-      <div className="card">
-        <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
-          <div className="contentItem">
-          <DatePicker format={dateFormat} onChange={this.dateChange}/>
-        </div>
-        <div className="contentItem">
-          <DataSelect
-            onChangeSelectOption={this.selectChange}
-            value={this.state.reportDate}
-          />
-        </div>
-        <div className="contentItem">
-          <Button type="primary" icon="snippets" loading={this.state.iconLoading} onClick={this.enterIconLoading}>
-            Generate Report
-          </Button>
-        </div>
-      </div>
-        {tableData.length < 1 ? "" :
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
-          <OBToolReportTab
-            tabledata={tableData}
-          />
-        </div>
+      <div className="container">
+        <OBMorrissonsDataUpdate
+          onChange={this.UpdateData}
+        />
+        <Divider orientation="left" style={{fontWeight: "200"}}>Generate Report</Divider>
+        <div>
+             <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
+               <div className="contentItem">
+            <DatePicker format={dateFormat} onChange={this.dateChange}/>
+          </div>
+               <div className="contentItem">
+                 <DataSelect
+                   onChangeSelectOption={this.selectChange}
+                   value={this.state.reportDate}
+                 />
+               </div>
+               <div className="contentItem">
+                 <Button type="primary" icon="snippets" loading={this.state.iconLoading} onClick={this.enterIconLoading}>
+                   Generate Report
+                 </Button>
+               </div>
+             </div>
+            {tableData.length < 1 ? "" :
+            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
+              <OBToolReportTab
+                tabledata={tableData}
+              />
+          </div>
         }
-    </div>
+      </div>
+      </div>
     );
   }
 }
