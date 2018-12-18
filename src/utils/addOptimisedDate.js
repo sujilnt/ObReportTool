@@ -1,4 +1,5 @@
 const {createJson} = require("./createJson");
+const{saveToLocalStorage}=require("../utils/utils");
 const addOptimisedDate=(siteNames, deviceNames)=>{
     //console.log("deviceName",deviceNames);
     //console.log("siteNames",siteNames, siteNames[0]["gsx$sitename"].$t);
@@ -10,6 +11,7 @@ const addOptimisedDate=(siteNames, deviceNames)=>{
      //siteNames.indexOf(row.name);
      return row;
   });
+  const localStorageFileCreation = saveToLocalStorage("getAllLocation",JSON.stringify(finalData));
   const fileCreate = createJson("getAlllocations.json",finalData);
 };
 module.exports.addOptimisedDate=addOptimisedDate;

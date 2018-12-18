@@ -36,15 +36,18 @@ const lastYear=(date)=>{
   const previuosYear= currentDate.setFullYear(currentYear-1);
   return currentDate;
 };
-
-const getSessionstorageData=(val)=>{
-  const session= window.sessionStorage.getItem(val);
- return session ? JSON.parse(session) : {start: 1 , limit: 500} ;
+const saveToLocalStorage = (localstorageName,value)=>{
+  return  window.localStorage.setItem(localstorageName,value)
+};
+const getSessionstorageData=(seassionValue,defaultValue)=>{
+  const session= window.sessionStorage.getItem(seassionValue);
+  return session ? JSON.parse(session) : defaultValue ;
 };
 module.exports= {
   convertDate: convertDate,
   numberFormatter: numberFormatter,
   getSessionstorageData: getSessionstorageData,
+  saveToLocalStorage:saveToLocalStorage,
   totalKWH:totalKWH,
   lastYear:lastYear
 };

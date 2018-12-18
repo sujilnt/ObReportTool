@@ -4,7 +4,7 @@ import OBInputNumber from "../OBInputNumber/OBInputNumber";
 import PropTypes from 'prop-types';
 const { Header } = Layout;
 import {getSessionstorageData} from "../../utils/utils";
-const sessionsValues =getSessionstorageData("numberOFSites");
+const sessionsValues =getSessionstorageData("numberOFSites",{start:1,limit:500});
 const limitValue = sessionsValues["limit"];
 const startValue =  sessionsValues["start"];
 class OBMorrissonsDataUpdate extends Component{
