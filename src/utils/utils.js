@@ -9,6 +9,7 @@ const convertDate= (dateInput)=>{
     return dateInISO;
   }
 };
+
 /* numberFormatter () -> formatting the number by rounding and showing 2 decimal places
 *   @params number
 *   returns the converted Date
@@ -36,9 +37,14 @@ const lastYear=(date)=>{
   return currentDate;
 };
 
+const getSessionstorageData=(val)=>{
+  const session= window.sessionStorage.getItem(val);
+ return session ? JSON.parse(session) : {start: 1 , limit: 500} ;
+};
 module.exports= {
   convertDate: convertDate,
   numberFormatter: numberFormatter,
+  getSessionstorageData: getSessionstorageData,
   totalKWH:totalKWH,
   lastYear:lastYear
 };

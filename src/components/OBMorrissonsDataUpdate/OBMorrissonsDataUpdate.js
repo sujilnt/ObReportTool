@@ -3,11 +3,15 @@ import {Tag, InputNumber, Layout, Button} from 'antd';
 import OBInputNumber from "../OBInputNumber/OBInputNumber";
 import PropTypes from 'prop-types';
 const { Header } = Layout;
+import {getSessionstorageData} from "../../utils/utils";
+const sessionsValues =getSessionstorageData("numberOFSites");
+const limitValue = sessionsValues["limit"];
+const startValue =  sessionsValues["start"];
 class OBMorrissonsDataUpdate extends Component{
   state={
      loading:false,
-      start: 1,
-      limit: 500,
+      start: startValue,
+      limit: limitValue,
   };
   handleInputNumberChange = (e)=>{
     this.setState(()=>{
@@ -21,6 +25,7 @@ class OBMorrissonsDataUpdate extends Component{
   };
   render(){
     const {limit,start}=this.state;
+    const inputNumber = {limit,start};
     return(<div>
       {!this.state.loading ?
         <Header style={{background: '#fff', padding: 0}}>
@@ -28,6 +33,8 @@ class OBMorrissonsDataUpdate extends Component{
             <div className="flex-container">
               <div className="flex-item">
                   <OBInputNumber
+                    reference={inputNumber}
+                    id={"start"}
                     color="cyan"
                     tagName="StartsWith"
                     size="small"
@@ -41,6 +48,8 @@ class OBMorrissonsDataUpdate extends Component{
               </div>
               <div className="flex-item">
                 <OBInputNumber
+                  reference={inputNumber}
+                  id={"limit"}
                   color="red"
                   tagName="Limit Number of Requests"
                   size="small"
