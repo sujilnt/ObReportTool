@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f9fdeb9-e246-44c9-a266-5320c80a8c65" name="Default Changelist" comment="adding packages.json">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/electricityConsumption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/electricityConsumption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/gasConsumpiton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/gasConsumpiton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/getConsumptionData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/getConsumptionData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data/getAlllocations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data/getAlllocations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/addOptimisedDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/addOptimisedDate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/utils.js" afterDir="false" />
     </list>
@@ -44,11 +51,11 @@
           <entry key="css" value="20" />
           <entry key="csv" value="8" />
           <entry key="gaspreviousYear" value="3" />
-          <entry key="gasthisYear" value="3" />
-          <entry key="js" value="408" />
-          <entry key="json" value="35" />
+          <entry key="gasthisYear" value="4" />
+          <entry key="js" value="433" />
+          <entry key="json" value="36" />
           <entry key="less" value="2" />
-          <entry key="previousYear" value="1" />
+          <entry key="previousYear" value="2" />
           <entry key="reading" value="7" />
           <entry key="reading22" value="7" />
           <entry key="thisYear" value="1" />
@@ -60,10 +67,10 @@
         <counts>
           <entry key="CSS" value="20" />
           <entry key="CSV" value="8" />
-          <entry key="JSON" value="37" />
-          <entry key="JavaScript" value="398" />
+          <entry key="JSON" value="38" />
+          <entry key="JavaScript" value="423" />
           <entry key="Less" value="2" />
-          <entry key="PLAIN_TEXT" value="38" />
+          <entry key="PLAIN_TEXT" value="40" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -72,7 +79,7 @@
           <entry key="babelrc" value="5" />
           <entry key="css" value="183" />
           <entry key="csv" value="192" />
-          <entry key="js" value="31887" />
+          <entry key="js" value="32240" />
           <entry key="json" value="12" />
           <entry key="reading" value="97" />
           <entry key="txt" value="29" />
@@ -83,7 +90,7 @@
           <entry key="CSS" value="183" />
           <entry key="CSV" value="192" />
           <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="31630" />
+          <entry key="JavaScript" value="31983" />
           <entry key="PLAIN_TEXT" value="383" />
         </counts>
       </usages-collector>
@@ -97,19 +104,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
+        <entry file="file://$PROJECT_DIR$/src/API/getAlloptimisedDevices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="38" column="24" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="182">
+              <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/getAlloptimisedDevices.js">
+        <entry file="file://$PROJECT_DIR$/src/API/getConsumptionData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="-570">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -117,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="30" column="53" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="2236">
+              <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
               <folding>
                 <element signature="e#14#56#0" expanded="true" />
               </folding>
@@ -127,10 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utils/addOptimisedDate.js">
+        <entry file="file://$PROJECT_DIR$/src/components/OBToolSideBar/OBToolSideBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="-572">
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -138,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="-390">
+              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -148,19 +155,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data/getAlllocations.js">
+        <entry file="file://$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="-104">
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <element signature="e#14#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/getAllLocation.js">
+        <entry file="file://$PROJECT_DIR$/src/utils/addOptimisedDate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="-78">
               <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/API/electricityConsumption.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Layout/Layout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -168,26 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OBToolcontent/OBToolcontent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/API/getAllOptimisedSite.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.dev.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="156">
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -204,10 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>2017-</find>
-      <find>proptypes</find>
-      <find>SubMenu</find>
-      <find>'</find>
       <find>optimisedDate</find>
       <find>&quot;Gas&quot;</find>
       <find>finalConsumptionData</find>
@@ -234,6 +240,10 @@
       <find>data</find>
       <find>defaultInclude</find>
       <find>start</find>
+      <find>gasData.json</find>
+      <find>createJ</find>
+      <find>deviceNames.map</find>
+      <find>createJson</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;,</replace>
@@ -250,7 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Data/1" />
         <option value="$PROJECT_DIR$/src/Data/getAlllocations.json" />
         <option value="$PROJECT_DIR$/src/Data/reading" />
         <option value="$PROJECT_DIR$/src/Data/reading22" />
@@ -277,30 +286,31 @@
         <option value="$PROJECT_DIR$/src/components/OBToolcontent/OBToolcontent.js" />
         <option value="$PROJECT_DIR$/src/test.js" />
         <option value="$PROJECT_DIR$/src/utils/csvconverter.js" />
-        <option value="$PROJECT_DIR$/src/API/getConsumptionData.js" />
         <option value="$PROJECT_DIR$/src/API/testapi.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/Layout.css" />
         <option value="$PROJECT_DIR$/src/components/OBToolReportTab/OBToolReportTab.js" />
         <option value="$PROJECT_DIR$/src/components/OBTable/OBTable.js" />
-        <option value="$PROJECT_DIR$/src/API/electricityConsumption.js" />
-        <option value="$PROJECT_DIR$/src/API/gasConsumpiton.js" />
         <option value="$PROJECT_DIR$/src/components/csvButton/CSVButton.js" />
         <option value="$PROJECT_DIR$/src/API/getAllOptimisedSite.js" />
         <option value="$PROJECT_DIR$/src/API/getAlloptimisedDevices.js" />
         <option value="$PROJECT_DIR$/src/components/OBToolHeader/OBToolHeader.js" />
         <option value="$PROJECT_DIR$/src/API/getAllLocation.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/Layout.js" />
-        <option value="$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/utils/createJson.js" />
         <option value="$PROJECT_DIR$/src/Data/getAlllocations.js" />
         <option value="$PROJECT_DIR$/src/API/fetchRequest.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js" />
         <option value="$PROJECT_DIR$/src/utils/utils.js" />
-        <option value="$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js" />
+        <option value="$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js" />
+        <option value="$PROJECT_DIR$/src/API/getConsumptionData.js" />
         <option value="$PROJECT_DIR$/src/utils/addOptimisedDate.js" />
+        <option value="$PROJECT_DIR$/builds/electron-react-webpack-boilerplate-win32-x64/resources/app/src/API/gasConsumpiton.js" />
+        <option value="$PROJECT_DIR$/src/API/gasConsumpiton.js" />
+        <option value="$PROJECT_DIR$/src/API/electricityConsumption.js" />
+        <option value="$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js" />
+        <option value="$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js" />
       </list>
     </option>
   </component>
@@ -355,7 +365,47 @@
               <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OBInputNumber" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OBMorrissonsDataUpdate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OBToolSideBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="electron-react-webpack-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="electron-react-webpack-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,7 +415,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="uti&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/utils.js&#10;.b&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/.babelrc&#10;ut&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/utils.js&#10;we&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/webpack.dev.config.js&#10;index&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/index.js&#10;crea&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/createJson.js&#10;main&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/main.js&#10;packa&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/package.json&#10;csvb&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/csvButton/CSVButton.js&#10;data&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data&#10;getAlllo&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data/getAlllocations.json&#10;OBtoo&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBToolcontent/OBToolcontent.js&#10;OBtab&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBTable/OBTable.js&#10;obTa&#9;null&#9;null&#10;csv&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/csvButton/CSVButton.js&#10;gasdata&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data/gasData.json&#10;ob&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBToolReportTab/OBToolReportTab.js&#10;App&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/App.js&#10;filt&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/API/filterData.js" />
+    <property name="SearchEverywhereHistoryKey" value="device&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/API/getAlloptimisedDevices.js&#10;uti&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/utils.js&#10;.b&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/.babelrc&#10;ut&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/utils.js&#10;we&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/webpack.dev.config.js&#10;index&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/index.js&#10;crea&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/utils/createJson.js&#10;main&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/main.js&#10;packa&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/package.json&#10;csvb&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/csvButton/CSVButton.js&#10;data&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data&#10;getAlllo&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data/getAlllocations.json&#10;OBtoo&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBToolcontent/OBToolcontent.js&#10;OBtab&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBTable/OBTable.js&#10;obTa&#9;null&#9;null&#10;csv&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/csvButton/CSVButton.js&#10;gasdata&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/Data/gasData.json&#10;ob&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/OBToolReportTab/OBToolReportTab.js&#10;App&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/components/App.js&#10;filt&#9;FILE&#9;file://C:/Users/Optimised/WebstormProjects/electron-react-webpack-boilerplate/src/API/filterData.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../learningRedux2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -416,17 +466,18 @@
       <workItem from="1544738794054" duration="597000" />
       <workItem from="1544741120433" duration="1862000" />
       <workItem from="1545039516414" duration="672000" />
-      <workItem from="1545126145072" duration="16540000" />
+      <workItem from="1545126145072" duration="20560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367760000" />
+    <option name="totallyTimeSpent" value="371780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49725273" visible="true" weight="0.15437302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49725273" visible="true" weight="0.15437302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5013774" side_tool="true" weight="0.14387918" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -440,7 +491,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32846716" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4328194" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4328194" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -478,20 +529,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="adding packages.json" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Data/thisYear">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-end-column="37907" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/previousYear">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-end-column="37823" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/antd.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
@@ -506,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OBToolSideBar/OBToolSideBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/csv/report.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -524,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/testapi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -562,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/filterData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="76" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DataSelect/DataSelect.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -587,13 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2028">
           <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/gasthisYear">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -632,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/getAlllocations.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret column="183897" selection-start-column="183897" selection-end-column="183897" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Data/gaspreviousYear">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -646,38 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/reportData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/sideBarData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/gasConsumpiton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
           <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/getConsumptionData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -717,13 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/electricityConsumption.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.build.config.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -741,27 +708,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js">
+    <entry file="file://$PROJECT_DIR$/webpack.dev.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="9" column="79" lean-forward="true" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
-          <folding>
-            <element signature="e#14#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="343">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/Layout.js">
+    <entry file="file://$PROJECT_DIR$/src/Data/previousYear">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="23" />
+        <state>
+          <caret column="112" selection-end-column="37889" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/getAllLocation.js">
+    <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="215">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -772,10 +736,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OBToolcontent/OBToolcontent.js">
+    <entry file="file://$PROJECT_DIR$/src/Data/gasthisYear">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state>
+          <caret column="142" selection-start-column="142" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data/getAlllocations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2410" lean-forward="true" selection-start-column="2410" selection-end-column="2410" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/testapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/sideBarData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/reportData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -786,51 +778,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.dev.config.js">
+    <entry file="file://$PROJECT_DIR$/src/API/getAllLocation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="52">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js">
+    <entry file="file://$PROJECT_DIR$/src/API/filterData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="260">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/builds/electron-react-webpack-boilerplate-win32-x64/resources/app/src/API/gasConsumpiton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/gasConsumpiton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/getConsumptionData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/API/electricityConsumption.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OBInputNumber/OBInputNumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="e#14#56#0" expanded="true" />
+            <element signature="e#14#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OBMorrissonsDataUpdate/OBMorrissonsDataUpdate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="-390">
+          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/API/getAlloptimisedDevices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="19" />
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/addOptimisedDate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="-78">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OBToolcontent/OBToolcontent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OBToolReport/OBToolReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2236">
+          <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OBToolSideBar/OBToolSideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>

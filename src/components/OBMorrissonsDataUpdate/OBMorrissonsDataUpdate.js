@@ -14,10 +14,8 @@ class OBMorrissonsDataUpdate extends Component{
       limit: limitValue,
   };
   handleInputNumberChange = (e)=>{
-    this.setState(()=>{
-      return e;
-    });
-    
+    this.setState(()=>e);
+    console.log("called",e,this.state);
   };
   enableUpdate=(state)=>{
     const enableButton = state.start === 1 && state.limit === 500 ;
@@ -54,7 +52,7 @@ class OBMorrissonsDataUpdate extends Component{
                   tagName="Limit Number of Requests"
                   size="small"
                   min={5}
-                  max={1000}
+                  max={500}
                   defaultValue={500}
                   onChange={this.handleInputNumberChange}
                   stateValueVariable={"limit"}

@@ -19,6 +19,7 @@ class OBToolReport extends PureComponent{
   fetchGasDetails=async()=>{
     const {reportDate} = this.state;
     const finalData= reportDate !== undefined ? await gasConsumption(reportDate).then(data=>data): "";
+    console.log("fetchGASDetails",finalData);
     this.setState(()=>{
       return {
         tableData: finalData

@@ -39,6 +39,9 @@ const lastYear=(date)=>{
 const saveToLocalStorage = (localstorageName,value)=>{
   return  window.localStorage.setItem(localstorageName,value)
 };
+const retrivelocalStorageJSON= (val)=>{
+  return window.localStorage.getItem(val);
+};
 const getSessionstorageData=(seassionValue,defaultValue)=>{
   const session= window.sessionStorage.getItem(seassionValue);
   return session ? JSON.parse(session) : defaultValue ;

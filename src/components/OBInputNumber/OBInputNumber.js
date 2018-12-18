@@ -8,9 +8,7 @@ const onHandleChange=(e,stateValueVariable,reference,id,onChange)=>{
     [id]:e,
   };
   window.sessionStorage.setItem("numberOFSites",JSON.stringify(sessionObject));
-  const oBInputNumber={};
-  oBInputNumber[stateValueVariable]=e;
-  onChange(oBInputNumber);
+  onChange(sessionObject);
 };
 const OBInputNumber =(props)=>{
   const{ color,tagName,min,max,defaultValue,value,stateValueVariable ,reference,id,onChange }=props;
