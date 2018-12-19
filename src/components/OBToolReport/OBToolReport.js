@@ -1,6 +1,13 @@
 "use strict";
 import React,{PureComponent} from "react";
-import {Button, DatePicker,Divider} from "antd";
+import {
+  Button,
+  DatePicker,
+  Divider,
+  notification,
+  Spin,
+  Alert,
+  Icon } from "antd";
 import PropTypes from "prop-types";
 import DataSelect from "../DataSelect/DataSelect";
 import OBToolReportTab from "../OBToolReportTab/OBToolReportTab";
@@ -14,38 +21,57 @@ class OBToolReport extends PureComponent{
     iconLoading:false,
     reportDate: "",
     reportType:"EACTIVE",
+    apiError:false,
+    apiErrorData: {},
     tableData: []
   };
   fetchGasDetails=async()=>{
     const {reportDate} = this.state;
-    const finalData= reportDate !== undefined ? await gasConsumption(reportDate).then(data=>data): "";
+    const finalData= reportDate !== undefined ? await gasConsumption(reportDate).then(this.getData).catch(this.errorFunc): "";
     console.log("fetchGASDetails",finalData);
+  };
+  errorFunc=(error)=>{
+    this.errormessageNotification(error);
     this.setState(()=>{
       return {
-        tableData: finalData
+        apiError:true,
+        apiErrorData:error
       }
+    })
+  };
+  getData= (data)=>{
+    this.setState(()=>{
+      return {
+        tableData: data
+      };
     })
   };
   fetchElectricityDetails=async()=>{
     const {reportDate} = this.state;
-    const finalData= reportDate !== undefined ?  await electricityConsumption(reportDate).then(data=>data) : "";
+    const finalData= reportDate !== undefined ?  await electricityConsumption(reportDate).then(this.getData).catch(this.errorFunc) : "";
     console.log("fetchElectricityDetails",finalData);
-    this.setState(()=>{
-      return {
-        tableData: finalData
-      }
-    })
+    console.log(this.state)
   };
 
   fetchaApiResults = (type)=>{
     return type==="EACTIVE"|| type==="GASENERGY"?
        type==="GASENERGY" ? this.fetchGasDetails() : this.fetchElectricityDetails()
-      : "currently focusing only reports on Electricity and Gas "
+      : "currently focusing only reports on Electricity and Gas ";
+    
   };
-
+  
+  errormessageNotification =  (error)=>{
+     notification["error"]({
+      message: 'Status 429',
+      description: 'DEXMA API request Failed , you have request limit for this hour .',
+      icon: <Icon type="warning" style={{ color: '#f5222d' }} />,
+      duration:6
+    });
+    
+  };
   enterIconLoading =async () => {
-    //this.setState({ iconLoading: true });
-    this.fetchaApiResults(this.state.reportType);
+    !this.state.apiError ?
+      this.fetchaApiResults(this.state.reportType): "";
   };
   selectChange=(value)=>{
     this.setState((prevState)=>{
@@ -58,11 +84,15 @@ class OBToolReport extends PureComponent{
     });
   };
   UpdateData =(e)=>{
-    console.log("called",e);
     getAlloptimisedDevices(e);
   };
   render(){
-    const {reportDate,tableData,reportType}=this.state;
+    const {
+      reportDate,
+      tableData,
+      reportType,
+      apiError
+    }=this.state;
     return(
       <div className="container">
         <OBMorrissonsDataUpdate
@@ -86,11 +116,22 @@ class OBToolReport extends PureComponent{
                  </Button>
                </div>
              </div>
-            {tableData.length < 1 ? "" :
+            {tableData.length < 1 && !apiError ? "" :
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
-              <OBToolReportTab
-                tabledata={tableData}
-              />
+              {tableData.length < 1 ?
+                <div style={{width: "100%"}}>
+                  <Spin tip="Loading..." delay={500}>
+                    <Alert
+                      message="Kindly be patient"
+                      description="You report is being pulled up."
+                      type="info"
+                    />
+                  </Spin>,
+                </div> :
+                <OBToolReportTab
+                  tabledata={tableData}
+                />
+              }
           </div>
         }
       </div>
