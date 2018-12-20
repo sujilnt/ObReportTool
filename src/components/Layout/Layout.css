@@ -22,3 +22,55 @@
   justify-content: flex-end;
   padding: 12px 6px;
 }
+.impclass{
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+.fixedDIv{
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  background: red;
+}
+.ant-layout-sider-trigger{
+  background: #1e2325;
+  /*background: #37393a;*/
+}
+
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-layout-sider{
+  background: #151617;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background: #74B943 !important;
+  border-color: #286100;
+  text-shadow: 0 -0.0625rem 0 rgba(0, 0, 0, .12);
+  -webkit-box-shadow: 0 0.125rem 0 rgba(0, 0, 0, .035);
+  box-shadow: 0 0.125rem 0 rgba(0, 0, 0, .035);
+}
+
+.ant-pagination-item-active a, .ant-pagination-item:focus a, .ant-pagination-item:hover a,.ant-tabs-nav .ant-tabs-tab-active,.ant-tabs-nav .ant-tabs-tab:hover {
+  color: #286100;
+
+}
+.ant-tabs-nav .ant-tabs-tab-active{
+  font-weight: 500;
+}
+
+.ant-tabs-ink-bar{
+  background: #74B943;
+}
+.ant-pagination-item-active{
+  border-color:#286100 !important;
+}
+.newClass{
+  background: black;
+}
+.newClass:hover{
+  background: #1e2325;
+  border-color: #1e2325;
+}

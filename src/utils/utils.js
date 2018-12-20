@@ -46,11 +46,15 @@ const getSessionstorageData=(seassionValue,defaultValue)=>{
   const session= window.sessionStorage.getItem(seassionValue);
   return session ? JSON.parse(session) : defaultValue ;
 };
+const covertOriginal =(date)=>{
+  return date.split("T")[0];
+};
 module.exports= {
   convertDate: convertDate,
   numberFormatter: numberFormatter,
   getSessionstorageData: getSessionstorageData,
   saveToLocalStorage:saveToLocalStorage,
+  covertOriginal:covertOriginal,
   totalKWH:totalKWH,
   lastYear:lastYear
 };

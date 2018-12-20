@@ -1,5 +1,5 @@
 "use strict";
-const {convertDate,totalKWH,lastYear} = require("../utils/utils");
+const {convertDate,totalKWH,lastYear,covertOriginal} = require("../utils/utils");
 const {consumption} = require("./consumption");
 const {filterData}= require("./filterData");
 
@@ -24,6 +24,7 @@ const getConsumptionData=(reportDate,type,dataToFilter,previousYear,params="D",p
           const consumptionPromise = await consumption(fromDate, toDate, deviceId,paramkey,params).then(async(values) => {
             return await values.statusCode === 200 ? JSON.parse(values.body).values: "";
         });
+         newrow.toDate = covertOriginal(newrow.toDate);
         let totalconsumption = newrow.totalConsumption = await totalKWH(consumptionPromise);
         totalconsumption !== 0 && totalconsumption !== "0" ? finalConsumptionData.push(newrow) : "";
         return newrow;

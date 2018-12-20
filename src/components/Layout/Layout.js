@@ -23,7 +23,7 @@ class SiderDemo extends PureComponent {
   
   render() {
     return (
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: '100vh',background: "#000000" }}>
          <Sider
           collapsible
           collapsed={this.state.collapsed}
@@ -35,7 +35,9 @@ class SiderDemo extends PureComponent {
         </Sider>
         <Layout>
          <OBToolcontent />
-          <OBToolFooter />
+          <div className="fixedDIv">
+            <OBToolFooter />
+          </div>
         </Layout>
       </Layout>
     );

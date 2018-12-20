@@ -1,5 +1,6 @@
 "use strict";
 import React,{PureComponent} from "react";
+import OBLOGO from "../../img/OBLOGO.png";
 import {
   Button,
   DatePicker,
@@ -95,12 +96,18 @@ class OBToolReport extends PureComponent{
     }=this.state;
     return(
       <div className="container">
-        <OBMorrissonsDataUpdate
-          onChange={this.UpdateData}
-        />
+        <div className="flex-container impclass" >
+          <div className="flex-item" >
+          <img src={OBLOGO} style={{height: "37px"}}/>
+          </div>
+          <OBMorrissonsDataUpdate
+            onChange={this.UpdateData}
+          />
+        </div>
+        
         <Divider orientation="left" style={{fontWeight: "200"}}>Generate Report</Divider>
         <div>
-             <div style={{ padding: 24, background: '#fff' }} className="contentContainer">
+             <div style={{ padding: 24, background: '#fff', margin: "5px 0" }} className="contentContainer card">
                <div className="contentItem">
             <DatePicker format={dateFormat} onChange={this.dateChange}/>
           </div>
@@ -117,7 +124,7 @@ class OBToolReport extends PureComponent{
                </div>
              </div>
             {tableData.length < 1 && !apiError ? "" :
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}  className="contentContainer card ">
+            <div style={{ padding: "8px 24px", background: '#fff', minHeight: 360 }}  className="contentContainer card ">
               {tableData.length < 1 ?
                 <div style={{width: "100%"}}>
                   <Spin tip="Loading..." delay={500}>

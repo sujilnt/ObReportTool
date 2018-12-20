@@ -4,7 +4,7 @@ import OBInputNumber from "../OBInputNumber/OBInputNumber";
 import PropTypes from 'prop-types';
 const { Header } = Layout;
 import {getSessionstorageData} from "../../utils/utils";
-const sessionsValues =getSessionstorageData("numberOFSites",{start:1,limit:500});
+const sessionsValues =getSessionstorageData("numberOFSites",{start:1,limit:250});
 const limitValue = sessionsValues["limit"];
 const startValue =  sessionsValues["start"];
 class OBMorrissonsDataUpdate extends Component{
@@ -33,7 +33,7 @@ class OBMorrissonsDataUpdate extends Component{
                   <OBInputNumber
                     reference={inputNumber}
                     id={"start"}
-                    color="cyan"
+                    color="#74B943"
                     tagName="StartsWith"
                     size="small"
                     min={1}
@@ -53,7 +53,7 @@ class OBMorrissonsDataUpdate extends Component{
                   size="small"
                   min={5}
                   max={500}
-                  defaultValue={500}
+                  defaultValue={250}
                   onChange={this.handleInputNumberChange}
                   stateValueVariable={"limit"}
                   value={limit}

@@ -6,7 +6,7 @@ const SubMenu = Menu.SubMenu;
 const renderMenuItem=(data)=>{
   const renderMenuItemArr=[];
   const eachMenuItem= data.map((row)=>{
-    renderMenuItemArr.push(<Menu.Item key={`${row}index`} ><Link to={row.url}>{row.name}</Link></Menu.Item>)
+    renderMenuItemArr.push(<Menu.Item key={`${row}index`} className="newClass" ><Link to={row.url} disabled={true}>{row.name}</Link></Menu.Item>)
   });
   return renderMenuItemArr;
 };
@@ -28,7 +28,7 @@ const OBToolSidebar = ()=>{
   console.log("side",sideBarData);
   return (
     <div className="card">
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline"  defaultOpenKeys={['Reportindex']}>
           {renderSubMenu(sideBarData)}
         </Menu>
     </div>
