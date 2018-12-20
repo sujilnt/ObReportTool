@@ -33,7 +33,9 @@ module.exports = {
   },
   target: 'electron-renderer',
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "OptimisedBuildings Report Generator"
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     })
