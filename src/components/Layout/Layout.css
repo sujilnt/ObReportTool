@@ -53,7 +53,7 @@
   box-shadow: 0 0.125rem 0 rgba(0, 0, 0, .035);
 }
 
-.ant-pagination-item-active a, .ant-pagination-item:focus a, .ant-pagination-item:hover a,.ant-tabs-nav .ant-tabs-tab-active,.ant-tabs-nav .ant-tabs-tab:hover {
+.ant-pagination-item-active a, .ant-pagination-item:focus a, .ant-pagination-item:hover a,.ant-tabs-nav .ant-tabs-tab-active,.ant-tabs-nav .ant-tabs-tab:hover ,a{
   color: #286100;
 
 }
