@@ -1,7 +1,7 @@
 'use strict';
 
 // Import parts of electron to use
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -60,7 +60,6 @@ function createWindow() {
     // Open the DevTools automatically if developing
     if (dev) {
       mainWindow.webContents.openDevTools();
-      console.log("electron",app);
     }
   });
 
@@ -85,7 +84,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the

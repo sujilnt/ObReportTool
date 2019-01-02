@@ -3,6 +3,7 @@
   "version": "1.2.5",
   "description": "Minimal Electron, React, PostCSS and Webpack boilerplate to help you get started with building your next app.",
   "license": "MIT",
+  "app_ICON": "./src/img/64.png",
   "private": false,
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.6.3",
     "react-router-dom": "^4.3.1",
     "request": "^2.88.0"
   },
@@ -71,7 +73,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.0",
     "postcss-pxtorem": "^4.0.1",
-    "react-csv-downloader": "github:dolezel/react-csv-downloader",
+    "react-csv-downloader": "^0.2.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
