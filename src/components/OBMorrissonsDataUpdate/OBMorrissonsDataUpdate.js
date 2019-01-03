@@ -14,7 +14,11 @@ class OBMorrissonsDataUpdate extends Component{
       limit: limitValue,
   };
   handleInputNumberChange = (e)=>{
-    this.setState(()=>e);
+    this.setState(()=>{
+      return {...e,
+        loading:false
+      };
+    });
     console.log("called",e,this.state);
   };
   enableUpdate=(state)=>{

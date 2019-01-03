@@ -85,6 +85,7 @@ class OBToolReport extends PureComponent{
     });
   };
   UpdateData =(e)=>{
+    console.log("data is updated");
     getAlloptimisedDevices(e);
   };
   render(){

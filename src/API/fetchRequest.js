@@ -4,7 +4,7 @@ const fetchRequest= (_url)=>{
   const options={
     url : _url,
     headers: {
-      'x-dexcell-token': "f33642abe6834a02932c",//"afd49db82f0edac95d2b",//"92809480b7c0d8f02632", //"3a8772f2ccbeb2e403f4",
+      'x-dexcell-token': "232e52e37aa1363e7289",//"afd49db82f0edac95d2b",//"92809480b7c0d8f02632", //"3a8772f2ccbeb2e403f4",
       "Accept": "application/json",
       'Accept-Charset': 'utf-8',
       'Content-Type': 'application/json'
