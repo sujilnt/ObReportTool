@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <a href="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate.svg?style=flat"></a>
-  <a href="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate/dev-status.svg?style=flat"></a>
+  <a href="https://github.com/sujilnt/ObReportTool"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate.svg?style=flat"></a>
+  <a href="https://github.com/sujilnt/ObReportTool"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/electron-react-webpack-boilerplate/dev-status.svg?style=flat"></a>
   <a href="http://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/npm/l/express.svg"></a>
 </p>
 
@@ -24,6 +24,7 @@ the <a href="https://anypoint.mulesoft.com/apiplatform/dexmatech/#/portals/organ
 
 * [Install](#Installation)
 * [Usage](#usage)
+* [working](#working-of-the-app)
 * [Code of Conduct](#code-of-conduct)
 * [License](#license)
 * [credits](#credits)
@@ -41,7 +42,7 @@ npm install or yarn install
 npm start  or yarn start
 ```
 
-## Working of the APP 
+## Working Of The APP 
 <img src="https://github.com/sujilnt/ObReportTool/blob/master/gif/app.gif" />
 
 ## Contributing
