@@ -11,83 +11,43 @@
 </p>
 
 <p align="center">
-  <a href="https://alexdevero.com"><img alt="Built by DEVERO" src="https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320"></a>
+  <a href="https://alexdevero.com"><img alt="Built by SUJIL ANTO " src="https://img.shields.io/badge/built%20by-Sujil Anto-brightgreen.svg?colorB=d30320"></a>
   <a href="https://github.com/alexdevero/electron-react-webpack-boilerplate/releases"><img alt="Current release" src="https://img.shields.io/github/release/alexdevero/electron-react-webpack-boilerplate.svg"></a>
 </p>
 
-## Minimal Electron, React and Webpack boilerplate
+## OBReportTool 
 
-Minimal Electron, React, PostCSS and Webpack boilerplate to help you get started with building your next app.
+A In-house project to find total consumption of electricity and gas using DexCell API . To know more about 
+the <a href="https://anypoint.mulesoft.com/apiplatform/dexmatech/#/portals/organizations/e053f968-a025-4467-b68b-55f111b3ff05/apis/5694/versions/5676/pages/146617">DEXMA API. </a>
 
 ### Table of contents
 
-* [Install](#install)
+* [Install](#Installation)
 * [Usage](#usage)
 * [Code of Conduct](#code-of-conduct)
 * [License](#license)
+* [credits](#credits)
 
-### Install
+## Installation
 
-#### Clone this repo
+Use the package manager [node](https://nodejs.org/en/) to install foobar.
 
-```
-git clone https://github.com/alexdevero/electron-react-webpack-boilerplate.git
-```
-
-#### Install dependencies
-
-```
-npm install
-```
-or
-```
-yarn
+```bash
+npm install or yarn install
 ```
 
-### Usage
-
-#### Run the app
-
+## Usage
 ```
-npm run start
-```
-or
-```
-yarn start
+npm start  or yarn start
 ```
 
-#### Build the app (automatic)
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-```
-npm run package
-```
-or
-```
-yarn package
-```
+Please make sure to update tests as appropriate.
 
-#### Build the app (manual)
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-```
-npm run build
-```
-or
-```
-yarn build
-```
-
-#### Test the app (after `npm run build` || `yarn run build`)
-```
-npm run prod
-```
-```
-yarn prod
-```
-
-### Code of Conduct
-
-[Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
-
-### License
-
-MIT © [Alex Devero](https://alexdevero.com).
+## Credits
+[Electron-Boilerplate by alexdevero ](https://github.com/alexdevero/electron-react-webpack-boilerplate)
