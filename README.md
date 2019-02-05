@@ -17,8 +17,7 @@
 
 ## OBReportTool 
 
-A In-house project to find total consumption of electricity and gas using DexCell API . To know more about 
-the <a href="https://anypoint.mulesoft.com/apiplatform/dexmatech/#/portals/organizations/e053f968-a025-4467-b68b-55f111b3ff05/apis/5694/versions/5676/pages/146617">DEXMA API. </a>
+A In-house project to find total consumption of electricity and gas using <a href="https://anypoint.mulesoft.com/apiplatform/dexmatech/#/portals/organizations/e053f968-a025-4467-b68b-55f111b3ff05/apis/5694/versions/5676/pages/146617">DEXCELL OR DEXMA API. </a>
 
 ### Table of contents
 
