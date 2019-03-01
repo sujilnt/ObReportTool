@@ -19,6 +19,9 @@
 
 A In-house project to find total consumption of electricity and gas using <a href="https://anypoint.mulesoft.com/apiplatform/dexmatech/#/portals/organizations/e053f968-a025-4467-b68b-55f111b3ff05/apis/5694/versions/5676/pages/146617">DEXCELL OR DEXMA API. </a>
 
+## Working Of The APP 
+<img src="https://github.com/sujilnt/ObReportTool/blob/master/gif/app.gif" />
+
 ### Table of contents
 
 * [Install](#Installation)
@@ -40,9 +43,6 @@ npm install or yarn install
 ```
 npm start  or yarn start
 ```
-
-## Working Of The APP 
-<img src="https://github.com/sujilnt/ObReportTool/blob/master/gif/app.gif" />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
