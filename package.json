@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "antd": "^3.10.2",
-    "electron": "^3.0.2",
+    "electron": "^11.5.0",
     "fs": "0.0.1-security",
     "history": "^4.7.2",
     "objects-to-csv": "^1.2.1",
